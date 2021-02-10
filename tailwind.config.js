@@ -1,10 +1,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: [
-    './templates/**/*.twig',
-    './templates/**/*.html'
-  ],
+  purge: ['./templates/**/*.html', './templates/**/*.twig', './src/js/**/*.js', './public/assets/svg/**/*.svg'],
   theme: {
     fontFamily: {
       display: ['Public Sans', 'Helvetica', 'serif'],

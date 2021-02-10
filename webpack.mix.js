@@ -61,13 +61,19 @@ if(!mix.inProduction()){
       require('tailwindcss')('./tailwind.config.js'),
       require('postcss-preset-env')({ 
         stage: 1 ,
-        autoprefixer: { grid: true }
+        autoprefixer: { grid: true },
+        features: {
+          'focus-within-pseudo-class': false
+        }
       }),
       require('cssnano'),
-      purgecss({
-        content: ['./templates/**/*.html', './templates/**/*.twig', './src/js/**/*.js'],
-      })
+      // purgecss({
+      //   content: ['./templates/**/*.html', './templates/**/*.twig', './src/js/**/*.js', './public/assets/svg/**/*.svg'],
+      // })
     ])
+  mix.options({
+    processCssUrls: false
+  })
 }
 
 mix.disableNotifications();
