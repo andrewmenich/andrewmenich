@@ -5,7 +5,7 @@
         rx="8"
         style="stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" 
         class="transition-all origin-center transform transform-gpu"
-        :class="{ 'rotate-45 origin-top-left translate-x-4 translate-y-0 opacity-0': isOpen, 'translate-y-2 opacity-1': !isOpen }"
+        :class="{ 'rotate-45 origin-top-left translate-x-4 translate-y-0 opacity-0': isOpen(), 'translate-y-2 opacity-1': !isOpen() }"
     >
     </rect>
     <rect 
@@ -13,7 +13,7 @@
         height="10" 
         rx="8"
         style="stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" class="transition-all origin-center transform transform-gpu"
-        :class="{ 'rotate-45 origin-top-left translate-x-4 translate-y-0': isOpen, 'translate-y-8': !isOpen }"
+        :class="{ 'rotate-45 origin-top-left translate-x-4 translate-y-0': isOpen(), 'translate-y-8': !isOpen() }"
     >
     </rect>
     <rect 
@@ -21,7 +21,7 @@
         height="10" 
         rx="8"
         style="stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" class="transition-all origin-center transform transform-gpu "
-        :class="{ 'translate-y-12 translate-x-16 origin-bottom-left -rotate-45': isOpen, 'translate-y-14': !isOpen }"
+        :class="{ 'translate-y-12 translate-x-16 origin-bottom-left -rotate-45': isOpen(), 'translate-y-14': !isOpen() }"
     ></rect>
 </svg>
 
