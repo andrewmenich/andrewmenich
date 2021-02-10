@@ -3,7 +3,8 @@
 
 {{ sprig.script }}
   
-
+{% set category = category ?? null %}
+  
   <section class="py-8 lg:py-20">
 
     <div class="container-default">
@@ -21,7 +22,7 @@
 
       <div class="self-start content-wrapper content-wrapper--wide sm:row-start-1">
         {{ sprig('_sprig/blog/index', {
-          category: null,
+          category: category ? category.id : null,
           query: null,
           limit: 10
         }) }}

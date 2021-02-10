@@ -2,7 +2,7 @@
 {% block content %}
 
 {% set image = entry.image.one() %}
-{% set category = entry.blogCategory.one() %}
+{% set categories = entry.blogCategory.all() %}
 {% set tags = entry.technologyTags.all() %}
 
 <div class="py-8 lg:py-20">
@@ -35,9 +35,23 @@
       <p class="mt-4 text-gray-500">
         Posted on 
         <time datetime="{{entry.postDate|date('Y-m-d H:i')}}">{{entry.postDate|date('M j, Y')}}</time>
-        {% if category %}
-        under <a href="#" class="px-1 text-purple hover:bg-dew ">{{category.title}}</a>
+        {% if categories|length %}
+        under 
+          {% for category in categories %}
+            <a href="{{ category.url }}" class="text-purple hover:bg-dew ">
+              {{category.title}}
+            </a>
+            {{ loop.last ? '' : ', '}}
+          {% endfor %}
+          
         {% endif %}
+      </p>
+      <p class="text-gray-500">
+        Tagged with: 
+
+        {% for tag in tags %}
+          {{tag}}{{ loop.last ? '' : ', '}}
+        {% endfor %}
       </p>
 
       {# <p class="mt-4 text-gray-500">
