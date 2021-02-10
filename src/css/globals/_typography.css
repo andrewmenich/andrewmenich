@@ -1,10 +1,3 @@
-@font-face {
-  font-family: "Public Sans";
-  src: url("../fonts/PublicSans.ttf") format("truetype");
-  font-variation-settings: "wght" 900;
-  font-display: swap;
-}
-
 @layer utilities {
 
   @variants responsive, hover {
@@ -61,4 +54,16 @@
       stroke-width: 3!important;
     }
   }
+}
+
+.prose code{
+  @apply inline-block px-2 py-1 text-gray-600 bg-gray-100;
+}
+
+.prose code::before, .prose code::after{
+  content: '';
+}
+
+.prose, p {
+  @apply vw-300;
 }

@@ -31,12 +31,3 @@
 .content-wrapper--center{
   @apply text-center mx-auto lg:col-start-3 lg:col-span-8
 }
-
-
-.prose code{
-  @apply inline-block px-2 py-1 text-gray-600 bg-gray-100;
-}
-
-.prose code::before, .prose code::after{
-  content: '';
-}
