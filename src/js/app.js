@@ -8,23 +8,23 @@ if(module.hot){
 window.navigation = function(){
   const body = document.querySelector('body');
   return {
-    isOpen: false,
+    show: false,
     close(){
-      this.isOpen = false;
+      this.show = false;
     },
     open(){
-      this.isOpen = true;
+      this.show = true;
     },
     toggle(){
-      this.isOpen = !this.isOpen;
-      if(this.isOpen){
+      this.show = !this.show;
+      if(this.show){
         body.classList.add('overflow-hidden');
       } else {
         body.classList.remove('overflow-hidden');
       }
     },
     isOpen(){
-      return this.isOpen === true;
+      return this.show === true;
     }
   }
 }
