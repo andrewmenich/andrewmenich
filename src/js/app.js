@@ -11,9 +11,11 @@ window.navigation = function(){
     show: false,
     close(){
       this.show = false;
+      body.classList.remove('overflow-hidden');
     },
     open(){
       this.show = true;
+      body.classList.add('overflow-hidden');
     },
     toggle(){
       this.show = !this.show;
