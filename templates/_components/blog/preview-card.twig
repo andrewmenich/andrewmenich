@@ -1,0 +1,29 @@
+<article class="flex flex-col items-start mb-10">
+  
+  {% if category %}
+    <a href="{{ category.url }}" class="inline-block px-2 py-1 mb-1 text-xs font-medium tracking-widest text-black uppercase rounded-full bg-dew">
+      {{ category.title }}
+    </a>
+  {% endif %}
+
+  <h4 class="mt-4 mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font">
+    {{ title }}
+  </h4>
+  <p class="mb-8 leading-relaxed">
+    {{ summary }}
+  </p>
+  <div class="relative flex flex-wrap items-center w-full pb-8 mt-auto {{ not last ? 'border-b-2 border-gray-100'}}">
+    <a href="{{ url }}" class="inline-flex items-center hover:text-purple stretched-link">
+      Read Full Article
+      {{ svg('@svg/arrow.svg')|attr({ class: 'h-4 w-4 ml-2' }) }}
+    </a>
+    <span class="inline-flex items-center py-1 pr-3 ml-auto mr-3 text-sm leading-none text-gray-400">
+      {{ svg('@svg/calendar.svg')|attr({ class: 'w-4 h-4 mr-1' }) }}
+      {{ postDate|date('M d, Y') }}
+    </span>
+    {# <span class="inline-flex items-center text-sm leading-none text-gray-400">
+      {{ svg('@svg/clock.svg')|attr({ class: 'w-4 h-4 mr-1' }) }}
+      ~5 minute read
+    </span> #}
+  </div>
+</article>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+	
+	{{ include('_includes/globals/head') }}
+
+	<body class="debug-screens">
+
+		{{ include('_includes/globals/header') }}
+
+		<main> 
+			{% block content %}{% endblock %}			
+		</main>
+
+		{{ include('_includes/globals/footer') }}
+
+		{{ include('_includes/globals/scripts') }}
+
+	</body>
+</html>

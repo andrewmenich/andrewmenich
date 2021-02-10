@@ -1,0 +1,42 @@
+.bg-pattern{
+  background-image: url('../images/pattern3.svg');
+  background-repeat: repeat-x repeat-x;
+}
+
+.s-shadow{
+  box-shadow: 28px 28px 0px 1px var(--color-purple);
+}
+
+@layer utilities {
+  @variants responsive {
+    .text-upright{
+      text-orientation:mixed;
+      writing-mode: vertical-lr;
+    }
+  }
+}
+
+.container-default{
+  @apply container grid grid-cols-12 gap-4 px-4 mx-auto justify-items-start lg:px-8
+}
+
+.content-wrapper{
+  @apply self-center col-span-12 tracking-tight md:col-start-3 md:col-span-8 lg:col-span-6 
+}
+
+.content-wrapper--wide{
+  @apply lg:col-start-3 lg:col-span-8
+}
+
+.content-wrapper--center{
+  @apply text-center mx-auto lg:col-start-3 lg:col-span-8
+}
+
+
+.prose code{
+  @apply inline-block px-2 py-1 text-gray-600 bg-gray-100;
+}
+
+.prose code::before, .prose code::after{
+  content: '';
+}

@@ -1,0 +1,63 @@
+{% extends "_layout" %}
+{% block content %}
+
+{% set image = entry.image.one() %}
+{% set category = entry.blogCategory.one() %}
+{% set tags = entry.technologyTags.all() %}
+
+<div class="py-8 lg:py-20">
+
+  <article class="container-default">
+
+    <section class="content-wrapper content-wrapper--center">
+      <h1 class="mb-4 text-4xl text-purple lg:text-5xl vw-900">
+        {{entry.title}}
+      </h1>
+
+      {% if entry.subtitle %}
+      <h2 class="mb-2 text-lg text-opacity-70 text-purple vw-400">
+        {{entry.subtitle}}
+      </h2>
+      {% endif %}
+
+      {% if image %}
+        {% set optimizedImages = image.optimizedImage %}
+        <img 
+          src="{{ optimizedImages.src() }}"
+          srcset="{{ optimizedImages.srcset() }}"
+          sizes="100vw"
+          class="w-full rounded"
+          alt="{{image.title}}"
+        />
+      {% endif %}
+      
+
+      <p class="mt-4 text-gray-500">
+        Posted on 
+        <time datetime="{{entry.postDate|date('Y-m-d H:i')}}">{{entry.postDate|date('M j, Y')}}</time>
+        {% if category %}
+        under <a href="#" class="px-1 text-purple hover:bg-dew ">{{category.title}}</a>
+        {% endif %}
+      </p>
+
+      {# <p class="mt-4 text-gray-500">
+        Updated on 
+        <time datetime="{{entry.dateUpdated|date('Y-m-d H:i')}}">{{entry.dateUpdated|date('M j, Y')}}</time>
+      </p> #}
+    </section>
+
+    <article class="w-full col-span-12 mx-auto prose lg:prose-lg sm:col-start-2 sm:col-end-12">
+
+      {% for block in entry.blogContent.all() %}
+        {% include '_components/blog/article/' ~ block.type|kebab with 
+          { 
+            'block': block 
+          } only 
+        %}
+      {% endfor %}
+
+    </article>
+  </article>
+</div>
+
+{% endblock %}

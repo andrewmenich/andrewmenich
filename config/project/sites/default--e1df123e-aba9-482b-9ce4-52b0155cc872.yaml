@@ -1,0 +1,8 @@
+baseUrl: $DEFAULT_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: 'Andrew Menich'
+primary: true
+siteGroup: a54fb0e5-bae0-4af5-b25b-650e45cc9707
+sortOrder: 1

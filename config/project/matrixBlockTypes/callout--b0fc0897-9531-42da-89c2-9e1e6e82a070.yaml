@@ -1,0 +1,161 @@
+field: de9b26b0-3ac8-4473-b247-fe67f24d78dd
+fieldLayouts:
+  a48009ec-8082-4dc3-8122-a9be1f73628a:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 6080d0e0-bf9d-40bc-9eea-2f2058248c38
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 17b563a8-100c-4bf9-842b-6c84e288923d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: fbe3f0cb-525a-41ae-b475-a24706be347a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Content
+        sortOrder: 1
+fields:
+  17b563a8-100c-4bf9-842b-6c84e288923d:
+    contentColumnType: string
+    fieldGroup: null
+    handle: color
+    instructions: ''
+    name: Color
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Yellow
+            -
+              - value
+              - yellow
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Red
+            -
+              - value
+              - red
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Blue
+            -
+              - value
+              - blue
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  6080d0e0-bf9d-40bc-9eea-2f2058248c38:
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Text
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  fbe3f0cb-525a-41ae-b475-a24706be347a:
+    contentColumnType: string
+    fieldGroup: null
+    handle: icon
+    instructions: ''
+    name: Icon
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Lightbulb
+            -
+              - value
+              - 'lightbulb '
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Question
+            -
+              - value
+              - question
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Warning
+            -
+              - value
+              - warning
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Exclamation
+            -
+              - value
+              - exclamation
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: callout
+name: Callout
+sortOrder: 4

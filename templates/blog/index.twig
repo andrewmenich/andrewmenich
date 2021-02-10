@@ -1,0 +1,33 @@
+{% extends "_layout" %}
+{% block content %}
+
+{{ sprig.script }}
+  
+
+  <section class="py-8 lg:py-20">
+
+    <div class="container-default">
+
+      {{ include(
+        '_atoms/vertical-title', 
+        {
+          title: "Blog",
+          tagLevel: "h1",
+          position: "left",
+          mobile: true
+        },
+        with_context = false
+      ) }}
+
+      <div class="self-start content-wrapper content-wrapper--wide sm:row-start-1">
+        {{ sprig('_sprig/blog/index', {
+          category: null,
+          query: null,
+          limit: 10
+        }) }}
+      </div>
+      
+    </div>
+  </section>
+
+{% endblock %}

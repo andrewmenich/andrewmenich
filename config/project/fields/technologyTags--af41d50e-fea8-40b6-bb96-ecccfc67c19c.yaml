@@ -1,0 +1,22 @@
+contentColumnType: string
+fieldGroup: a8521155-7afd-4462-b214-2c0909c7e927
+handle: technologyTags
+instructions: ''
+name: 'Technology Tags'
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'taggroup:cdd53710-1360-4245-a559-3e08a9577479'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Tags

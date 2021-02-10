@@ -1,0 +1,59 @@
+fieldLayouts:
+  3f4e3e2c-a4cb-414c-93dc-a50062298770:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: f7e582a1-a2a0-4ac2-955b-35c0516f0c8c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: images
+hasUrls: true
+name: Images
+settings:
+  addSubfolderToRootUrl: ''
+  autoFocalPoint: ''
+  bucket: andrewmeni.ch
+  bucketSelectionMode: manual
+  cfDistributionId: $AWS_CLOUDFRONT_ID
+  cfPrefix: ''
+  expires: '14 days'
+  keyId: $AWS_IAM_ID
+  makeUploadsPublic: '1'
+  region: us-east-2
+  secret: $AWS_IAM_KEY
+  storageClass: ''
+  subfolder: ''
+sortOrder: 1
+type: craft\awss3\Volume
+url: $AWS_CLOUDFRONT_DIST

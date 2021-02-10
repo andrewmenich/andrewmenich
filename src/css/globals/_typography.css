@@ -1,0 +1,79 @@
+/* URLs are relative to the /css folder */
+@font-face {
+  font-family: "FiraCode";
+  src: url("../fonts/FiraCode-VariableFont_wght.ttf") format("truetype");
+  font-variation-settings: "wght" 420;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans.ttf") format("truetype");
+  font-variation-settings: "wght" 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("../fonts/Newsreader.ttf") format("truetype");
+  font-variation-settings: 'wdth' 400, 'wght' 400;
+  font-display: swap;
+}
+
+@layer utilities {
+
+  @variants responsive, hover {
+    .vw-100{
+      --text-weight:100;
+      font-variation-settings: "wght" var(--text-weight);
+    }
+    
+    .vw-200{
+      --text-weight:200;
+      font-variation-settings: "wght" var(--text-weight);
+    }
+    
+    .vw-300{
+      --text-weight:300;
+      font-variation-settings: "wght" var(--text-weight);
+    }
+    
+    .vw-400{
+      --text-weight:400;
+      font-variation-settings: "wght" var(--text-weight);
+    }
+    
+    .vw-500{
+      --text-weight:500;
+      font-variation-settings: "wght" var(--text-weight);
+    }
+    
+    .vw-600{
+      --text-weight:600;
+      font-variation-settings: "wght" var(--text-weight);
+    }
+    
+    .vw-700{
+      --text-weight:700;
+      font-variation-settings: "wght" var(--text-weight);
+    }
+    
+    .vw-800{
+      --text-weight:800;
+      font-variation-settings: "wght" var(--text-weight);
+    }
+    
+    .vw-900{
+      --text-weight:900;
+      font-variation-settings: "wght" var(--text-weight);
+    }
+
+    .stroke-3 {
+      stroke-width: 3!important;
+    }
+
+    .stroke-4 {
+      stroke-width: 3!important;
+    }
+  }
+}

@@ -1,0 +1,156 @@
+field: de9b26b0-3ac8-4473-b247-fe67f24d78dd
+fieldLayouts:
+  9f5c56c4-4221-4a0b-9b45-171c78f3accb:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: c472d6e9-fdc7-443a-ab2d-b611bdac4213
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 10dfbb0c-bad0-4a55-ba06-b8bba4318b0c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ef894b20-cc1d-4e63-9073-9c1f9de18c1d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  10dfbb0c-bad0-4a55-ba06-b8bba4318b0c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: codeType
+    instructions: ''
+    name: 'Code Type'
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - JavaScript
+            -
+              - value
+              - javascript
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - CSS
+            -
+              - value
+              - css
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Markup
+            -
+              - value
+              - markup
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Twig
+            -
+              - value
+              - twig
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - PHP
+            -
+              - value
+              - php
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Shell
+            -
+              - value
+              - shellsession
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  c472d6e9-fdc7-443a-ab2d-b611bdac4213:
+    contentColumnType: text
+    fieldGroup: null
+    handle: code
+    instructions: ''
+    name: Code
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: '1'
+      columnType: null
+      initialRows: '8'
+      multiline: '1'
+      placeholder: ''
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ef894b20-cc1d-4e63-9073-9c1f9de18c1d:
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: ''
+    name: Caption
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: code
+name: Code
+sortOrder: 3

@@ -1,0 +1,7 @@
+/.env
+/.idea
+/vendor
+.DS_Store
+*.hot-update.json
+/.vscode
+/node_modules

@@ -1,0 +1,8 @@
+{% set icon = '@svg/' ~ block.icon ~ '.svg' %}
+{% set iconClass = 'h-7 w-7 text-' ~ block.color ~ '-500' %}
+<div class="w-full p-4 my-4 bg-{{block.color}}-100 rounded-md">
+  <span class="flex items-center justify-center mb-0 bg-{{block.color}}-200 rounded-full w-9 h-9">
+    {{ svg(icon)|attr({ class: iconClass }) }}
+  </span>
+  <p class="my-0 lg:my-0">{{ block.text }}</p>
+</div>

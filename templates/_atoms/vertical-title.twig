@@ -1,0 +1,16 @@
+{% set classList = "self-start col-span-12 text-4xl text-center uppercase cursor-default md:col-span-2 md:row-start-1 md:transform text-purple md:text-6xl lg:text-8xl vw-900 md:text-upright" %}
+
+{% if position == 'left' %}
+  {% set classList = classList ~ " md:-rotate-180 sm:-ml-4" %}
+{% else %}
+  {% set classList = classList ~ " md:col-start-12 sm:-mr-4" %}
+{% endif %}
+
+{% set mobileClass = mobile ? '' : ' hidden md:block' %}
+{% set classList = classList ~ mobileClass %}
+
+
+{{ tag(tagLevel, {
+  class: classList,
+  text: title
+}) }}

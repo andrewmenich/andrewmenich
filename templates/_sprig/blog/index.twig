@@ -1,0 +1,110 @@
+{% set category = category ?? null %}
+{% set query = query ?? null %}
+{% set limit = limit ?? null %}
+
+{% set allCategories = craft.categories().group('blogCategories').all() %}
+{% set articles = craft.entries()
+	.section('blog')
+	.limit(limit)
+	.search(query)
+	.relatedTo(category)
+	.with(['blogCategory', 'featuredImage'])
+	.all() 
+%}
+
+	<div class="w-full mb-16 sm:flex sm:justify-between sm:row-start-1">
+
+		<div class="my-8 mr-4 lg:my-0 xl:my-0">
+			<fieldset>
+				<legend class="block mb-2 text-xs text-gray-700 uppercase">
+					Filter by Tag
+				</legend>
+
+				<div 
+					class="flex flex-wrap"
+				>
+
+					{% for allCategory in allCategories %}
+						<label 
+							for="category-{{allCategory.id}}" 
+							class="flex items-center justify-center mr-2 mb-2 px-2 py-1 text-xs tracking-widest text-black uppercase rounded-full cursor-pointer border border-dew vw-400 hover:bg-dew {{allCategory.id == category ? 'bg-dew vw-400'}}"
+						>
+							{{ allCategory.title }}
+							<input sprig 
+								type="checkbox" 
+								name="category" 
+								id="category-{{allCategory.id}}" 
+								class="invisible w-0 h-0" 
+								value="{{allCategory.id}}"
+							/>
+						</label>
+					{% endfor %}
+
+          {% if category %}
+          <label 
+						for="category-clear" 
+						class="flex items-center justify-center px-2 py-1 mb-2 mr-2 text-xs tracking-widest text-black uppercase border rounded-full cursor-pointer stroke-2 border-dew vw-400 bg-dew hover:stroke-3"
+					>
+						Clear
+						<input sprig 
+							type="checkbox" 
+							name="category" 
+							id="category-clear" 
+							class="invisible w-0 h-0" 
+							value="" 
+						/>
+						{{ svg('@svg/x.svg')|attr({ class: 'ml-2 icon icon-tabler icon-tabler-x' }) }}
+					</label>
+          {% endif %}
+
+				</div>
+
+			</fieldset>
+
+		</div>
+
+		<div class="my-8 lg:my-0 xl:my-0">
+			<label for="blog-search" class="block mb-2 text-xs text-gray-700 uppercase focus-within:text-purple">
+				Search
+			</label>
+			<div class="relative flex flex-col justify-end">
+				<div class="absolute left-0 flex items-center justify-center w-8 h-8 rounded-t-sm cursor-pointer bg-inherit">
+					{{ svg('@svg/search.svg')|attr({ class: 'w-4 h-4' }) }}
+				</div>
+				<input 
+					sprig
+					s-trigger="keyup changed throttle:1s"
+					type="search"
+					name="query"
+					id="blog-search" 
+					class="flex items-center w-64 h-8 pl-10 text-sm font-normal text-gray-700 border-0 border-b border-gray-300 focus:outline-none focus:border focus:border-purple focus:ring-0" 
+					placeholder=""
+					value="{{ query }}"
+					/>
+			</div>
+		</div>
+
+	</div>
+
+	{% if articles|length %}
+
+		{% for article in articles %}
+
+			{% include "_components/blog/preview-card" with {
+				title: article.title,
+				subtitle: article.subtitle,
+				summary: article.summary,
+				category: article.blogCategory[0] ?? null,
+				image: article.featuredImage[0] ?? null,
+				url: article.url,
+				postDate: article.postDate,
+				last: loop.last
+			} only %}
+
+		{% endfor %}
+
+	{% else %}
+		
+		{% include "_components/blog/empty" with {} only %}
+
+	{% endif %}
