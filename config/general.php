@@ -43,12 +43,15 @@ return [
     // Staging environment settings
     'staging' => [
         // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => true,
+        'allowAdminChanges' => false,
     ],
 
     // Production environment settings
     'production' => [
         // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => true,
+        'allowAdminChanges' => false,
+        'aliases' => [
+            '@svg' => '/home/andrew/sites/andrewmenich/public/assets/svg'
+        ]
     ],
 ];
