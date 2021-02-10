@@ -1,22 +1,7 @@
-/* URLs are relative to the /css folder */
-@font-face {
-  font-family: "FiraCode";
-  src: url("../fonts/FiraCode-VariableFont_wght.ttf") format("truetype");
-  font-variation-settings: "wght" 420;
-  font-display: swap;
-}
-
 @font-face {
   font-family: "Public Sans";
   src: url("../fonts/PublicSans.ttf") format("truetype");
   font-variation-settings: "wght" 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Newsreader";
-  src: url("../fonts/Newsreader.ttf") format("truetype");
-  font-variation-settings: 'wdth' 400, 'wght' 400;
   font-display: swap;
 }
 
