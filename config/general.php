@@ -52,7 +52,7 @@ return [
         // Set this to `false` to prevent administrative changes from being made on production
         'allowAdminChanges' => false,
         'aliases' => [
-            '@svg' => '/home/andrew/sites/andrewmenich/public/assets/svg'
+            '@svg' => '/home/ploi/andrewmeni.ch/public/assets/svg'
         ]
     ],
 ];
