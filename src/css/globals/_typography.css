@@ -56,6 +56,22 @@
   }
 }
 
+.prose h2{
+  @apply vw-700;
+}
+
+.prose h3{
+  @apply vw-500;
+}
+
+.prose h4{
+  @apply vw-300;
+}
+
+.prose h6{
+  @apply tracking-tight text-gray-500 uppercase vw-700;
+}
+
 .prose code{
   @apply inline-block px-2 py-1 text-gray-600 bg-gray-100;
 }
@@ -66,4 +82,12 @@
 
 .prose, p {
   @apply vw-300;
+}
+
+.prose a{
+  @apply vw-500;
+}
+
+.callout p{
+  @apply my-0 !important;
 }
