@@ -27,7 +27,7 @@
 					{% for allCategory in allCategories %}
 						<label 
 							for="category-{{allCategory.id}}" 
-							class="flex items-center justify-center mr-2 mb-2 px-2 py-1 text-xs text-black uppercase rounded-full cursor-pointer border border-sand vw-400 hover:bg-sand {{allCategory.id == category ? 'bg-sand vw-400'}}"
+							class="flex items-center justify-center mr-2 mb-2 px-2 py-1 text-xs text-night tracking-wide rounded-full cursor-pointer border border-night vw-400 hover:text-sand hover:bg-night {{allCategory.id == category ? 'bg-night vw-400'}}"
 						>
 							{{ allCategory.title }}
 							<input sprig 
