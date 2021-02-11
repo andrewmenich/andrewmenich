@@ -4,8 +4,8 @@
 >
 
 	<div 
-    class="relative z-20 flex items-center flex-shrink-0 mr-6 text-inherit hover:text-{{hover}} nav-logo"
-    :class="{ 'text-night hover:text-white': isOpen() }"
+    class="relative z-20 flex items-center flex-shrink-0 mr-6 text-inherit nav-logo"
+    :class="{ 'text-night hover:text-white': isOpen(), 'hover:text-{{hover}}': !isOpen() }"
     >
     <a href="/" title="Home" class="text-3xl tracking-tighter vw-900">
       AM
@@ -15,8 +15,8 @@
 	<div class="block lg:hidden" x-on:click="isOpen() ? close() : open()">
 		<button 
       
-      class="relative z-20 flex items-center text-inherit hover:text-{{hover}}"
-      :class="{ 'transition transform transform-180 text-night hover:text-white': isOpen() }"
+      class="relative z-20 flex items-center text-inherit"
+      :class="{ 'transition text-night hover:text-white': isOpen(), 'hover:text-{{hover}}': !isOpen() }"
     >
       {{ svg('@svg/menu.svg')|attr({class: 'w-9 h-9 fill-current'}) }}
 		</button>
@@ -24,22 +24,22 @@
 
 	<div 
     class="absolute top-0 left-0 z-10 flex flex-col w-full h-screen px-4 pt-32 overflow-hidden bg-froly text-inherit motion-safe:animate-fade-in lg:animation-none lg:pt-0 lg:px-0 lg:relative lg:bg-transparent lg:h-auto lg:flex lg:items-center lg:w-auto lg:text-center"
-    :class="{ 'block text-night opacity-100 hover:text-white': isOpen(), 'hidden': !isOpen() }"
+    :class="{ 'block text-night opacity-100': isOpen(), 'hidden': !isOpen() }"
   >
 		<div class="text-6xl lg:text-lg lg:text-center lg:flex-grow ">
-      <a href="{{ url() }}" class="block mt-4 opacity-0 motion-safe:animate-fade-in-right animation-forwards lg:mr-4 lg:inline-block lg:opacity-100 lg:animation-none lg:mt-0 hover:text-{{hover}}">
+      <a href="{{ url() }}" class="block mt-4 opacity-0 motion-safe:animate-fade-in-right animation-forwards lg:mr-4 lg:inline-block lg:opacity-100 lg:animation-none lg:mt-0 hover:text-white">
 				Home
 			</a>
-			<a href="{{ url('blog') }}" class="block mt-4 opacity-0 motion-safe:animate-fade-in-right animation-forwards animation-delay-100 lg:animation-none lg:opacity-100 lg:mr-4 lg:inline-block lg:mt-0 hover:text-{{hover}}">
+			<a href="{{ url('blog') }}" class="block mt-4 opacity-0 motion-safe:animate-fade-in-right animation-forwards animation-delay-100 lg:animation-none lg:opacity-100 lg:mr-4 lg:inline-block lg:mt-0 hover:text-white">
 				Blog
 			</a>
-      <a href="{{ url('about') }}" class="block mt-4 opacity-0 motion-safe:animate-fade-in-right animation-forwards animation-delay-200 lg:animation-none lg:opacity-100 lg:mr-4 lg:inline-block lg:mt-0 hover:text-{{hover}}">
+      <a href="{{ url('about') }}" class="block mt-4 opacity-0 motion-safe:animate-fade-in-right animation-forwards animation-delay-200 lg:animation-none lg:opacity-100 lg:mr-4 lg:inline-block lg:mt-0 hover:text-white">
 				About
 			</a>
-			{# <a href="/today-i-learned" class="block mt-4 lg:mr-4 lg:inline-block lg:mt-0 hover:text-{{hover}}">
+			{# <a href="/today-i-learned" class="block mt-4 lg:mr-4 lg:inline-block lg:mt-0 hover:text-white">
 				TIL
 			</a> #}
-			<a href="{{ url('contact') }}" class="block mt-4 opacity-0 motion-safe:animate-fade-in-right animation-forwards animation-delay-300 lg:animation-none lg:opacity-100 lg:mr-4 lg:inline-block lg:mt-0 hover:text-{{hover}}">
+			<a href="{{ url('contact') }}" class="block mt-4 opacity-0 motion-safe:animate-fade-in-right animation-forwards animation-delay-300 lg:animation-none lg:opacity-100 lg:mr-4 lg:inline-block lg:mt-0 hover:text-white">
 				Contact
 			</a>
 		</div>
