@@ -1,1 +1,1 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 143"><title>wave</title><path d="M0,79H80c80,0,240,0,400-21.3C640,36,800-6,960,4.3,1120,15,1280,79,1360,111l80,32V-177H0Z" style="fill:#ffd500"/></svg>
+<svg id="Layer_1" class="text-night" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 143"><title>wave</title><path d="M0,79H80c80,0,240,0,400-21.3C640,36,800-6,960,4.3,1120,15,1280,79,1360,111l80,32V-177H0Z" class="fill-current"/></svg>

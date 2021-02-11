@@ -1,5 +1,24 @@
-<header class="grid grid-cols-12 px-4 bg-gold lg:px-0 ">
+{% switch text %}
+  {% case 'night' %}
+    {% set hover = 'white' %}
+  {% case 'froly' %}
+    {% set hover = 'valencia' %}
+  {% case 'valencia' %}
+    {% set hover = 'teal' %}
+  {% case 'teal' %}
+    {% set hover = 'night' %}
+  {% case 'white' %}
+    {% set hover = 'sand' %}
+  {% case 'black' %}
+    {% set hover = 'valencia' %}
+  {% default %}
+    {% set hover = 'sand' %}
+{% endswitch %}
+
+<header class="grid grid-cols-12 px-4 bg-{{bg|default('night')}} text-{{text|default('white')}} lg:px-0 ">
   <div class="container col-span-12 mx-auto lg:px-8">
-    {{ include('_includes/globals/navigation') }}
+    {{ include('_includes/globals/navigation', {hover: hover}) }}
   </div>
 </header>
+{# purgecss: bg-night bg-froly bg-teal bg-sand bg-valencia bg-white bg-black #}
+{# purgecss: text-night text-froly text-teal text-sand text-valencia text-white text-black #}

@@ -20,12 +20,17 @@ module.exports = {
       colors: {
         dew: '#E1EFE6',
         gold: '#ffd500',
-        ash: '#AEB7B3',
         purple: '#341C5E',
+        night: '#102040',
+        teal: '#025E73',
+        sand: '#F2C879',
+        froly: '#F28177',
+        valencia: '#D94E4E'
       },
       animation: {
         'fade-in-right': 'fadeInRight .4s ease-out',
-        'fade-in': "fadeIn .12s ease-in forwards"
+        'fade-in': "fadeIn .12s ease-in forwards",
+        'bounce-right': 'bounceRight 1s infinite'
       },
       keyframes: {
         fadeInRight: {
@@ -35,7 +40,31 @@ module.exports = {
         fadeIn: {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 }
+        },
+        bounceRight: {
+          '0%, 100%': {
+            transform: 'translateX(25%)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+          },
+          '50%': {
+            transform: 'translateX(0)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+          }
         }
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#000411',
+            a: {
+              color: '#025E73',
+              'text-decoration': 'none',
+              '&:hover': {
+                color: '#102040',
+              },
+            },
+          },
+        },
       }
     },
     container: {
@@ -48,7 +77,7 @@ module.exports = {
     },
   },
   variants: {
-    animation: ["motion-safe"]
+    animation: ["motion-safe", "hover"]
   },
   plugins: [
     require('@tailwindcss/forms'),

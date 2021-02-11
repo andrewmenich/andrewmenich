@@ -1,24 +1,13 @@
 {% extends "_layout" %}
 {% block content %}
 
-<section class="py-20 bg-gold">
+<section class="py-20 text-white bg-night">
   <div class="container-default">
-    
-    {{ include(
-      '_atoms/vertical-title', 
-      {
-        title: "Hello",
-        tagLevel: "p",
-        position: "left",
-        mobile: false
-      },
-      with_context = false
-    )}}
-    
+      
     <article class="content-wrapper content-wrapper--wide">
-      <p class="mb-1 text-lg vw-200">My name is</p>
+      <p class="mb-1 text-lg vw-300">My name is</p>
       <h1 class="text-4xl tracking-tight lg:text-5xl vw-900">Andrew Menich</h1>
-      <p class="mt-2 text-lg vw-200">and I'm a <strong class="vw-500">web developer</strong> from Toledo, Ohio. I specialize in Craft CMS development with experience using a variety of frontend and backend technologies.</p>
+      <p class="mt-2 text-lg vw-300">and I'm a <strong class="vw-500">web developer</strong> from Toledo, Ohio. I specialize in Craft CMS development with experience using a variety of frontend and backend technologies.</p>
       <p>
 
         <a id="github" href="https://github.com/andrewmenich" class="inline-block mt-3 mr-2 hover:text-purple" title="View my GitHub profile">
@@ -44,34 +33,17 @@
   </div>
 </section>
 
-{# TODO - may be better as a pseudo element #}
-<div>
-  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 143"><title>wave</title><path d="M0,79H80c80,0,240,0,400-21.3C640,36,800-6,960,4.3,1120,15,1280,79,1360,111l80,32V-177H0Z" style="fill:#ffd500"/></svg>
-</div>
+{{svg('@svg/wave.svg')|attr({class: 'text-night'})}}
 
 <section class="py-8 container-default lg:py-20">
-
-  {# <h2 class="self-start col-span-2 col-start-12 row-start-1 text-4xl text-center uppercase transform cursor-default text-purple md:text-6xl lg:col-start-12 lg:col-span-1 lg:text-8xl vw-900 text-upright">
-    Blog
-  </h2> #}
-
-  {% include '_atoms/vertical-title' with
-    {
-      title: "Blog",
-      tagLevel: "h2",
-      position: "right",
-      mobile: true
-    }
-    only
-  %}
 
   <div class="content-wrapper content-wrapper--wide md:row-start-1">
 
     <div class="w-full mb-12 lg:w-1/2">
-      <h3 class="mb-2 text-2xl font-medium text-gray-900 sm:text-3xl title-font">
-        Recent Posts
-      </h3>
-      <div class="w-20 h-1 bg-purple"></div>
+      <h2 class="mb-2 text-2xl font-medium text-night sm:text-3xl title-font">
+        Recent Blog Posts
+      </h2>
+      <div class="w-20 h-1 bg-teal"></div>
     </div>
 
     <div id="blog-wrapper" class="w-100">
@@ -110,7 +82,7 @@
   </div>
 </section>
 
-{# <section class="py-8 bg-black text-dew">
+{# <section class="py-8 bg-black text-sand">
   <div class="container-default">
     <div class="text-lg content-wrapper content-wrapper--center">
       <p class="">
@@ -121,7 +93,7 @@
   </div>
 </section> #}
 
-{# <section class="py-8 bg-dew lg:py-20">
+{# <section class="py-8 bg-sand lg:py-20">
   <div class="container-default">
 
     {{ include(

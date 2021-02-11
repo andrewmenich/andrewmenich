@@ -6,7 +6,9 @@
 
 	<body class="antialiased font-display">
 
-		{{ include('_includes/globals/header') }}
+		{% block navigation %}
+			{{ include('_includes/globals/header', {bg: 'night', text: 'white'}, with_context = false) }}
+		{% endblock %}
 
 		<main> 
 			{% block content %}{% endblock %}			

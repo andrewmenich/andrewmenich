@@ -27,7 +27,7 @@
 					{% for allCategory in allCategories %}
 						<label 
 							for="category-{{allCategory.id}}" 
-							class="flex items-center justify-center mr-2 mb-2 px-2 py-1 text-xs text-black uppercase rounded-full cursor-pointer border border-dew vw-400 hover:bg-dew {{allCategory.id == category ? 'bg-dew vw-400'}}"
+							class="flex items-center justify-center mr-2 mb-2 px-2 py-1 text-xs text-black uppercase rounded-full cursor-pointer border border-sand vw-400 hover:bg-sand {{allCategory.id == category ? 'bg-sand vw-400'}}"
 						>
 							{{ allCategory.title }}
 							<input sprig 
@@ -43,7 +43,7 @@
           {% if category %}
           <label 
 						for="category-clear" 
-						class="flex items-center justify-center px-2 py-1 mb-2 mr-2 text-xs text-black uppercase border rounded-full cursor-pointer stroke-2 border-dew vw-400 bg-dew hover:stroke-3"
+						class="flex items-center justify-center px-2 py-1 mb-2 mr-2 text-xs text-black uppercase border rounded-full cursor-pointer stroke-2 border-sand vw-400 bg-sand hover:stroke-3"
 					>
 						Clear
 						<input sprig 

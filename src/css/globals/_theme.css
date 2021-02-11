@@ -31,3 +31,7 @@
 .content-wrapper--center{
   @apply text-center mx-auto lg:col-start-3 lg:col-span-8
 }
+
+.read-more:hover svg{
+  @apply animate-bounce-right;
+}
