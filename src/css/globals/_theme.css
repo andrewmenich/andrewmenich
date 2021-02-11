@@ -35,3 +35,7 @@
 .read-more:hover svg{
   @apply animate-bounce-right;
 }
+
+.wave{
+  margin-top: -1px;
+}
