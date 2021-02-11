@@ -9,17 +9,6 @@
 
     <div class="container-default">
 
-      {{ include(
-        '_atoms/vertical-title', 
-        {
-          title: "Blog",
-          tagLevel: "h1",
-          position: "left",
-          mobile: true
-        },
-        with_context = false
-      ) }}
-
       <div class="self-start content-wrapper content-wrapper--wide sm:row-start-1">
         {{ sprig('_sprig/blog/index', {
           category: category ? category.id : null,

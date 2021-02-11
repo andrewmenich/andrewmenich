@@ -10,6 +10,11 @@
       --text-weight:200;
       font-variation-settings: "wght" var(--text-weight);
     }
+
+    .vw-250{
+      --text-weight:250;
+      font-variation-settings: "wght" var(--text-weight);
+    }
     
     .vw-300{
       --text-weight:300;

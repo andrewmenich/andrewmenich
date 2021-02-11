@@ -1,21 +1,24 @@
 {% extends "_layout" %}
+
+{% block navigation %}
+  {{ include('_includes/globals/header', {bg: 'froly', text: 'night'}, with_context = false) }}
+{% endblock %}
+
 {% block content %}
 
 {% set image = entry.image.one() %}
 {% set categories = entry.blogCategory.all() %}
 {% set tags = entry.technologyTags.all() %}
 
-<div class="py-8 lg:py-20">
-
-  <article class="container-default">
-
-    <section class="content-wrapper content-wrapper--center">
-      <h1 class="mb-4 text-4xl text-purple lg:text-5xl vw-900">
+<section class="py-6 lg:pb-12 lg:pt-20 bg-froly ">
+  <div class="container-default">
+    <div class="content-wrapper content-wrapper--center">
+      <h1 class="mb-4 text-4xl text-night lg:text-5xl vw-900">
         {{entry.title}}
       </h1>
 
       {% if entry.subtitle %}
-      <h2 class="mb-2 text-lg text-opacity-70 text-purple vw-400">
+      <h2 class="mb-2 text-lg text-opacity-70 text-night vw-400">
         {{entry.subtitle}}
       </h2>
       {% endif %}
@@ -32,46 +35,38 @@
       {% endif %}
       
 
-      <p class="mt-4 text-gray-500">
+      <p class="inline-block px-3 py-2 mt-4 text-black bg-sand vw-400">
         Posted on 
         <time datetime="{{entry.postDate|date('Y-m-d H:i')}}">{{entry.postDate|date('M j, Y')}}</time>
         {% if categories|length %}
         under 
           {% for category in categories %}
-            <a href="{{ category.url }}" class="text-purple hover:bg-dew ">
+            <a href="{{ category.url }}" class="text-night">
               {{category.title}}
             </a>
-            {{ loop.last ? '' : ', '}}
+            {{ loop.last ? '' : '/ '}}
           {% endfor %}
           
         {% endif %}
       </p>
-      <p class="text-gray-500">
-        Tagged with: 
+    </div>
+  </div>    
+</section>
 
-        {% for tag in tags %}
-          {{tag}}{{ loop.last ? '' : ', '}}
-        {% endfor %}
-      </p>
+{{ svg('@svg/wave2.svg')|attr({class: 'text-froly'}) }}
 
-      {# <p class="mt-4 text-gray-500">
-        Updated on 
-        <time datetime="{{entry.dateUpdated|date('Y-m-d H:i')}}">{{entry.dateUpdated|date('M j, Y')}}</time>
-      </p> #}
-    </section>
+<section class="mt-6 mb-20 container-default">
+  <article class="w-full col-span-12 mx-auto prose lg:prose-lg sm:col-start-2 sm:col-end-12">
 
-    <article class="w-full col-span-12 mx-auto prose lg:prose-lg sm:col-start-2 sm:col-end-12">
+    {% for block in entry.blogContent.all() %}
+      {% include '_components/blog/article/' ~ block.type|kebab with 
+        { 
+          'block': block 
+        } only 
+      %}
+    {% endfor %}
 
-      {% for block in entry.blogContent.all() %}
-        {% include '_components/blog/article/' ~ block.type|kebab with 
-          { 
-            'block': block 
-          } only 
-        %}
-      {% endfor %}
-
-    </article>
   </article>
-</div>
+</section>
 
 {% endblock %}
