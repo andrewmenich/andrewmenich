@@ -1,0 +1,18 @@
+fieldLayouts:
+  2273b21b-f680-4df4-b85c-a8f2eaf9dde6:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 615c44da-1a13-423d-bb6c-7735e2f2e297
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Settings
+        sortOrder: 1
+handle: applications
+name: Applications

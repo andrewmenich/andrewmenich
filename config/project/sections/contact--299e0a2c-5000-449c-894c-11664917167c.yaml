@@ -1,11 +1,11 @@
 enableVersioning: true
-handle: todayILearned
-name: 'Today I Learned'
+handle: contact
+name: Contact
 propagationMethod: all
 siteSettings:
   e1df123e-aba9-482b-9ce4-52b0155cc872:
     enabledByDefault: true
     hasUrls: true
-    template: today-i-learned/_entry
-    uriFormat: 'today-i-learned/{slug}'
-type: channel
+    template: pages/_entry
+    uriFormat: contact
+type: single

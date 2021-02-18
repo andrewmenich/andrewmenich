@@ -1,4 +1,4 @@
-dateModified: 1612742309
+dateModified: 1613658138
 email:
   fromEmail: andrew@andrewmenich.com
   fromName: 'Andrew Menich'
@@ -23,6 +23,7 @@ plugins:
   image-optimize:
     edition: standard
     enabled: true
+    licenseKey: 6VXMKOEKWG5AU3MOLC51TXBV
     schemaVersion: 1.0.0
     settings:
       allowUpScaledImageVariants: false
@@ -74,6 +75,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
+    licenseKey: MT4GKC8UPHCGSAN6W432IDJI
     schemaVersion: 3.0.9
   sprig:
     edition: standard
@@ -87,7 +89,7 @@ system:
   edition: solo
   live: true
   name: 'Andrew Menich'
-  schemaVersion: 3.5.13
+  schemaVersion: 3.6.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

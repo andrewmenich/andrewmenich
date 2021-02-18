@@ -18,9 +18,6 @@ module.exports = {
     },
     extend: {
       colors: {
-        dew: '#E1EFE6',
-        gold: '#ffd500',
-        purple: '#341C5E',
         night: '#102040',
         teal: '#025E73',
         sand: '#F2C879',
@@ -34,7 +31,7 @@ module.exports = {
       },
       keyframes: {
         fadeInRight: {
-          'from': { opacity: 0, '-webkit-transform': 'translate3d(10%, 0, 0)', transform: 'translate3d(10%, 0, 0)' },
+          'from': { opacity: 0, '-webkit-transform': 'translate3d(7%, 0, 0)', transform: 'translate3d(7%, 0, 0)' },
           'to': { opacity: 1, '-webkit-transform': 'translate3d(0, 0, 0)', transform: 'translate3d(0, 0, 0)' }
         },
         fadeIn: {

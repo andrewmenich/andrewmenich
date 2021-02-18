@@ -1,5 +1,5 @@
 fieldLayouts:
-  3f4e3e2c-a4cb-414c-93dc-a50062298770:
+  89f78950-8100-4406-9045-cc3f38e8a712:
     tabs:
       -
         elements:
@@ -23,11 +23,11 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\AssetTitleField
+            type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
           -
-            fieldUid: 7400d270-0f60-4c9c-bcde-334f16a00be9
+            fieldUid: 19d1e84a-6e8f-4958-b187-a3f7373915fd
             instructions: null
             label: null
             required: false
@@ -36,35 +36,21 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: f7e582a1-a2a0-4ac2-955b-35c0516f0c8c
-            instructions: null
-            label: null
-            required: false
+            fieldUid: fe33b57c-e4e7-473c-a517-c546c16a3c0a
+            instructions: ''
+            label: 'About Me'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
         name: Content
         sortOrder: 1
-handle: images
-hasUrls: true
-name: Images
-settings:
-  addSubfolderToRootUrl: ''
-  autoFocalPoint: ''
-  bucket: andrewmeni.ch
-  bucketSelectionMode: manual
-  cfDistributionId: $AWS_CLOUDFRONT_ID
-  cfPrefix: ''
-  expires: '14 days'
-  keyId: $AWS_IAM_ID
-  makeUploadsPublic: '1'
-  region: us-east-2
-  secret: $AWS_IAM_KEY
-  storageClass: ''
-  subfolder: ''
-sortOrder: 0
+handle: about
+hasTitleField: false
+name: About
+section: 7fd24046-61d3-4b4a-a1ef-bb385db80b07
+sortOrder: 1
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
-titleTranslationMethod: null
-type: craft\awss3\Volume
-url: $AWS_CLOUDFRONT_DIST
+titleTranslationMethod: site

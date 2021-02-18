@@ -1,0 +1,10 @@
+<aside class="text-sm text-gray-300 font-mono text-center my-0 prism border-b-1 border-gray-500 language-{{block.codeType}} rounded-t">
+	{{ block.caption }}
+</aside>
+<pre class="text-sm">
+  <code class="prism language-{{block.codeType}}">
+    {% spaceless %}
+      {{ block.code }}
+    {% endspaceless %}
+  </code>
+</pre>

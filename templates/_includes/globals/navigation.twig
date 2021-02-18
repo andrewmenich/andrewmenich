@@ -1,10 +1,16 @@
+{% set pages = [
+  {title: 'Home', url: url()},
+  {title: 'Blog', url: url('blog')},
+  {title: 'About', url: url('about')},
+  {title: 'Contact', url: url('contact')}
+] %}
 <nav 
   class="flex flex-wrap items-center justify-between py-4 sm:py-6 font-display vw-900"
   x-data="navigation()"
 >
 
 	<div 
-    class="relative z-20 flex items-center flex-shrink-0 mr-6 text-inherit nav-logo"
+    class="relative z-20 flex items-center flex-shrink-0 mr-6 transition text-inherit nav-logo"
     :class="{ 'text-night hover:text-white': isOpen(), 'hover:text-{{hover}}': !isOpen() }"
     >
     <a href="/" title="Home" class="text-3xl tracking-tighter vw-900">
@@ -15,33 +21,29 @@
 	<div class="block lg:hidden" x-on:click="isOpen() ? close() : open()">
 		<button 
       
-      class="relative z-20 flex items-center text-inherit"
-      :class="{ 'transition text-night hover:text-white': isOpen(), 'hover:text-{{hover}}': !isOpen() }"
+      class="relative z-20 flex items-center transition text-inherit"
+      :class="{ 'text-night hover:text-white': isOpen(), 'hover:text-{{hover}}': !isOpen() }"
     >
       {{ svg('@svg/menu.svg')|attr({class: 'w-9 h-9 fill-current'}) }}
 		</button>
 	</div>
 
 	<div 
-    class="absolute top-0 left-0 z-10 flex flex-col w-full h-screen px-4 pt-32 overflow-hidden bg-froly text-inherit motion-safe:animate-fade-in lg:animation-none lg:pt-0 lg:px-0 lg:relative lg:bg-transparent lg:h-auto lg:flex lg:items-center lg:w-auto lg:text-center"
-    :class="{ 'block text-night opacity-100': isOpen(), 'hidden': !isOpen() }"
+    class="absolute top-0 left-0 z-10 flex flex-col w-full h-screen px-4 pt-32 overflow-x-hidden bg-froly text-inherit motion-safe:animate-fade-in lg:animation-none lg:pt-0 lg:px-0 lg:relative lg:bg-transparent lg:h-auto lg:flex lg:items-center lg:w-auto lg:text-center"
+    :class="{ 'block opacity-100 overflow-y-scroll': isOpen(), 'hidden': !isOpen() }"
   >
-		<div class="text-6xl lg:text-lg lg:text-center lg:flex-grow ">
-      <a href="{{ url() }}" class="block mt-4 opacity-0 motion-safe:animate-fade-in-right animation-forwards lg:mr-4 lg:inline-block lg:opacity-100 lg:animation-none lg:mt-0 hover:text-white">
-				Home
+		<div class="text-6xl lg:text-lg lg:flex-grow ">
+
+    {% for page in pages %}
+      <a href="{{ page.url }}" 
+        class="block mt-4 opacity-0 animation-delay-{{loop.index * 50}} motion-safe:animate-fade-in-right animation-forwards lg:mr-4 lg:inline-block lg:opacity-100 lg:animation-none lg:mt-0"
+        :class="{'transition hover:text-white': isOpen(), 'transition hover:text-{{hover}}': !isOpen()}"
+      >
+				{{ page.title }}
 			</a>
-			<a href="{{ url('blog') }}" class="block mt-4 opacity-0 motion-safe:animate-fade-in-right animation-forwards animation-delay-100 lg:animation-none lg:opacity-100 lg:mr-4 lg:inline-block lg:mt-0 hover:text-white">
-				Blog
-			</a>
-      <a href="{{ url('about') }}" class="block mt-4 opacity-0 motion-safe:animate-fade-in-right animation-forwards animation-delay-200 lg:animation-none lg:opacity-100 lg:mr-4 lg:inline-block lg:mt-0 hover:text-white">
-				About
-			</a>
-			{# <a href="/today-i-learned" class="block mt-4 lg:mr-4 lg:inline-block lg:mt-0 hover:text-white">
-				TIL
-			</a> #}
-			<a href="{{ url('contact') }}" class="block mt-4 opacity-0 motion-safe:animate-fade-in-right animation-forwards animation-delay-300 lg:animation-none lg:opacity-100 lg:mr-4 lg:inline-block lg:mt-0 hover:text-white">
-				Contact
-			</a>
+    {% endfor %}
+
+			
 		</div>
 	</div>
 
@@ -58,4 +60,4 @@
 
 </nav>
 
-{# purgecss: hover:text-white hover:text-black hover:text-teal hover:text-night hover:text-froly hover:text-valencia hover:text-sand #}
+{# purgecss: hover:text-white hover:text-black hover:text-teal hover:text-night hover:text-froly hover:text-valencia hover:text-sand animation-delay-0 animation-delay-50 animation-delay-100 animation-delay-150 animation-delay-250 animation-delay-300 animation-delay-350 animation-delay-400 animation-delay-450 animation-delay-500 #}

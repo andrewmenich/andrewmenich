@@ -13,10 +13,9 @@
     {{ summary }}
   </p>
   <div class="relative flex flex-wrap items-center w-full pb-6 mt-auto {{ not last ? 'border-b-2 border-gray-100'}}">
-    <a href="{{ url }}" class="inline-flex items-center stretched-link read-more">
-      Read Full Article
-      {{ svg('@svg/arrow.svg')|attr({ class: 'h-4 w-4 ml-2' }) }}
-    </a>
+
+	  {{ include('_atoms/read-more.twig', {url: url}) }}
+
     <span class="inline-flex items-center py-1 pr-3 ml-auto mr-3 text-sm leading-none text-gray-400 vw-600">
       {{ svg('@svg/calendar.svg')|attr({ class: 'w-4 h-4 mr-1' }) }}
       {{ postDate|date('M d, Y') }}

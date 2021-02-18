@@ -28,14 +28,14 @@ return [
         // Whether to save the project config out to config/project.yaml
         // (see https://docs.craftcms.com/v3/project-config.html)
         'errorTemplatePrefix' => "pages/_errors/",
-
-        'useProjectConfigFile' => false,  
+        'allowAdminChanges' => false,
     ],
 
     // Dev environment settings
     'dev' => [
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
         'devMode' => true,
+        'allowAdminChanges' => true,
         'aliases' => [
             '@svg' => '/home/ubuntu/sites/andrewmenich/public/assets/svg'
         ]
@@ -44,13 +44,11 @@ return [
     // Staging environment settings
     'staging' => [
         // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => false,
     ],
 
     // Production environment settings
     'production' => [
         // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => false,
         'aliases' => [
             '@svg' => '/home/ploi/andrewmeni.ch/public/assets/svg'
         ]

@@ -1,5 +1,5 @@
 fieldLayouts:
-  3f4e3e2c-a4cb-414c-93dc-a50062298770:
+  94b41366-09a1-44dc-9207-0b12b01afe9b:
     tabs:
       -
         elements:
@@ -23,20 +23,11 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\AssetTitleField
+            type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
           -
-            fieldUid: 7400d270-0f60-4c9c-bcde-334f16a00be9
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: f7e582a1-a2a0-4ac2-955b-35c0516f0c8c
+            fieldUid: 968a4418-b0eb-4cde-8024-055f9a3c99fa
             instructions: null
             label: null
             required: false
@@ -46,25 +37,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: images
-hasUrls: true
-name: Images
-settings:
-  addSubfolderToRootUrl: ''
-  autoFocalPoint: ''
-  bucket: andrewmeni.ch
-  bucketSelectionMode: manual
-  cfDistributionId: $AWS_CLOUDFRONT_ID
-  cfPrefix: ''
-  expires: '14 days'
-  keyId: $AWS_IAM_ID
-  makeUploadsPublic: '1'
-  region: us-east-2
-  secret: $AWS_IAM_KEY
-  storageClass: ''
-  subfolder: ''
-sortOrder: 0
+handle: sampleWork
+hasTitleField: false
+name: 'Sample Work'
+section: 2a4c0516-d69c-4378-971e-11a86797ee2f
+sortOrder: 1
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
-titleTranslationMethod: null
-type: craft\awss3\Volume
-url: $AWS_CLOUDFRONT_DIST
+titleTranslationMethod: site

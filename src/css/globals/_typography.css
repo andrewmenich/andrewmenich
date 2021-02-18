@@ -70,7 +70,7 @@
 }
 
 .prose h4{
-  @apply vw-300;
+  @apply text-base text-valencia vw-600;
 }
 
 .prose h6{

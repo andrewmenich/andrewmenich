@@ -32,6 +32,10 @@
   @apply text-center mx-auto lg:col-start-3 lg:col-span-8
 }
 
+.content-wrapper--full{
+  @apply md:col-start-1 md:col-span-12
+}
+
 .read-more:hover svg{
   @apply animate-bounce-right;
 }

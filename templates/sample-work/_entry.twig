@@ -1,0 +1,97 @@
+{% extends "_layout" %}
+
+{% block navigation %}
+	{{ include('_includes/globals/header', {bg: 'sand', text: 'night'}, with_context = false) }}
+{% endblock %}
+
+{% block content %}
+
+	{% set image = entry.image.one() %}
+	{% set client = entry.client.one() %}
+	{% set tags = entry.technologyTags.all() %}
+
+	<section class="py-8 lg:pb-12 lg:pt-20 bg-sand ">
+		<div class="container-default">
+			<div class="content-wrapper content-wrapper--center">
+				<h1 class="mb-4 text-4xl text-night lg:text-5xl vw-900">
+					{{entry.title}}
+				</h1>
+
+				{% if entry.subtitle %}
+					<h2 class="mb-2 text-lg text-opacity-70 text-night vw-400">
+						{{entry.subtitle}}
+					</h2>
+				{% endif %}
+
+				<p class="text-lg">{{ entry.summary }}</p>
+			</div>
+		</div>
+	</section>
+	{{ include('_atoms/wave', {
+		color: 'sand'
+	}, with_context = false) }}
+
+
+
+	<section class="mt-10 mb-20 container-default">
+		<article class="prose lg:prose-lg content-wrapper content-wrapper--wide">
+			<dl class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-8">
+				<div class="w-full mb-4 pr-2">
+					<dt class="block vw-700 text-base">Role:</dt>
+					<dd class="block vw-300">{{ entry.role }}</dd>
+				</div>
+
+				<div class="w-full mb-4 pr-2">
+					<dt class="block vw-700 text-base">Client:</dt>
+					<dd class="block vw-300">{{ client.title }}</dd>
+				</div>
+
+				<div class="w-full mb-4 pr-2">
+					<dt class="block vw-700 text-base">Tech:</dt>
+					<dd class="block vw-300">
+						{% for tag in tags %}
+							{{ tag }}{{ loop.last ? '' : ', ' }}
+						{% endfor %}
+					</dd>
+				</div>
+
+				{% if entry.simpleLink|length %}
+					<div class="w-full mb-4 pr-2">
+						<dt class="block vw-700 text-base">See it Live:</dt>
+						<dd class="block vw-300">
+							<a href="{{ entry.simpleLink }}" rel="noreferrer nofollow" class="text-teal hover:underline">{{ entry.simpleLink }}</a>
+						</dd>
+					</div>
+				{% endif %}
+
+				<div class="w-full mb-4 pr-2">
+					<dt class="block vw-700 text-base">Organization:</dt>
+					<dd class="block vw-300">Madhouse Creative</dd>
+				</div>
+
+			</dl>
+			<figure class="mb-4 w-full">
+				{% if image %}
+					{% set optimizedImages = image.optimizedImage %}
+					<img
+						src="{{ optimizedImages.src() }}"
+						srcset="{{ optimizedImages.srcset() }}"
+						sizes="100vw"
+						class="w-full rounded shadow-md"
+						alt="{{image.title}}"
+					/>
+				{% endif %}
+			</figure>
+
+			{% for block in entry.blogContent.all() %}
+				{% include '_components/article/' ~ block.type|kebab with
+					{
+						'block': block
+					} only
+				%}
+			{% endfor %}
+
+		</article>
+	</section>
+
+{% endblock %}

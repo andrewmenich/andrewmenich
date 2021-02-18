@@ -1,6 +1,10 @@
 {% switch text %}
   {% case 'night' %}
-    {% set hover = 'white' %}
+		{% if bg is defined and bg == 'sand' %}
+				{% set hover = 'teal' %}
+			{% else  %}
+				{% set hover = 'white' %}
+		{% endif %}
   {% case 'froly' %}
     {% set hover = 'valencia' %}
   {% case 'valencia' %}

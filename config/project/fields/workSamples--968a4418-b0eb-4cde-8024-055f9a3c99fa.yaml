@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: f9938e69-64e4-4ea0-a405-767a320f556e
+handle: workSamples
+instructions: ''
+name: 'Work Samples'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:61a74c93-f853-472b-9980-df7122bce686'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries
