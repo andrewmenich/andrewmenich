@@ -1,0 +1,149 @@
+{% extends "_layout" %}
+{% block content %}
+
+<section class="py-20 text-white bg-night">
+  <div class="container-default">
+      
+    <article class="content-wrapper content-wrapper--wide">
+      <p class="mb-1 text-lg vw-300">Hi! my name is</p>
+      <h1 class="text-4xl tracking-tight text-froly lg:text-5xl vw-900">Andrew Menich</h1>
+      <p class="mt-2 text-lg vw-300">and I'm a <strong class="vw-500">web developer</strong> from Toledo, Ohio. I specialize in Craft CMS development with experience using a variety of frontend and backend technologies.</p>
+      <p>
+
+        <a id="github" href="https://github.com/andrewmenich" class="inline-block mt-3 mr-2 text-froly hover:text-valencia" title="View my GitHub profile">
+          {{ include('_includes/svg/github.twig', {
+            classList: "w-7 h-7"
+          }) }}
+        </a>
+
+        <a id="twitter" href="https://twitter.com/AndrewMenich" class="inline-block mt-3 mr-2 text-froly hover:text-valencia" title="View my Twitter profile">
+          {{ include('_includes/svg/twitter.twig', {
+            classList: "w-7 h-7"
+          }) }}
+        </a>
+
+        <a id="email" href="mailto:andrew@andrewmenich.com" class="inline-block mt-3 mr-2 text-froly hover:text-valencia" title="Contact me via email">
+          {{ include('_includes/svg/envelope.twig', {
+            classList: "w-7 h-7"
+          }) }}
+        </a>
+
+      </p>
+    </article>
+  </div>
+</section>
+
+  {{ include('_atoms/wave', {
+    color: 'night'
+  }, with_context = false) }}
+
+
+<section class="py-8 container-default lg:py-20">
+
+  <div class="content-wrapper content-wrapper--wide md:row-start-1">
+
+    <div class="w-full mb-12 lg:w-1/2">
+      <h2 class="mb-2 text-2xl font-medium text-night sm:text-3xl title-font">
+        Recent Blog Posts
+      </h2>
+      <div class="w-20 h-1 bg-froly"></div>
+    </div>
+
+    <div id="blog-wrapper" class="w-100">
+      {% set blogPosts = craft.entries()
+        .section('blogPosts')
+        .orderBy('postDate desc')
+        .limit(10)
+        .with(['blogCategory', 'featuredImage'])
+        .all() 
+      %}
+
+      {% for post in blogPosts %}
+
+        {% include "_components/blog/preview-card" with {
+          title: post.title,
+          subtitle: post.subtitle,
+          summary: post.summary,
+          category: post.blogCategory[0] ?? null,
+          image: post.featuredImage[0] ?? null,
+          url: post.url,
+          postDate: post.postDate,
+          last: loop.last
+        } only %}
+
+      {% endfor %}
+
+      {% if blogPosts|length == 10 %}
+      <p class="text-center">
+        <a href="{{ url('blog') }}" class="inline-block px-8 py-3 mx-2 my-2 text-lg leading-6 tracking-wide text-white transition duration-150 ease-in-out rounded text bg-purple hover:bg-opacity-90 vw-700">
+          View All Posts
+        </a>
+      </p>
+      {% endif %}
+      
+    </div>
+  </div>
+</section>
+
+{# <section class="py-8 bg-black text-sand">
+  <div class="container-default">
+    <div class="text-lg content-wrapper content-wrapper--center">
+      <p class="">
+        Interested in what I've worked on?
+        <a href="#" class="block mx-auto sm:mx-4 sm:inline-block vw-900">View Projects</a>  
+      </p>
+    </div>
+  </div>
+</section> #}
+
+{# <section class="py-8 bg-sand lg:py-20">
+  <div class="container-default">
+
+    {{ include(
+      '_atoms/vertical-title', 
+      {
+        title: "TIL",
+        tagLevel: "h2",
+        position: "left",
+        mobile: true
+      },
+      with_context = false
+    )}}
+
+    <div class="content-wrapper content-wrapper--wide">
+
+      <div class="w-full mb-12 lg:w-1/2">
+        <h3 class="mb-2 text-2xl font-medium text-gray-900 sm:text-3xl title-font">
+          Today I learned
+        </h3>
+        <div class="w-20 h-1 bg-purple"></div>
+      </div>
+
+      <div id="til-wrapper" class="grid grid-cols-1 gap-6 sm:grid-cols-2 w-100">
+        {% set tilPosts = craft.entries()
+          .section('todayILearned')
+          .limit(6)
+          .with(['blogCategory'])
+          .all() 
+        %}
+
+        {% for post in tilPosts %}
+          {% include '_components/today-i-learned/preview-card' with 
+            {
+              title: post.title,
+              summary: post.summary,
+              category: post.blogCategory[0] ?? null,
+              url: post.url,
+              postDate: post.postDate,
+              last: loop.last
+            } 
+            only
+          %}
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section> #}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "_layout" %}
+{% block content %}
+
+{{ sprig.script }}
+
+<section class="py-6 lg:pb-12 lg:pt-16 bg-night ">
+  <div class="container-default">
+    <div class="content-wrapper content-wrapper--center">
+      <h1 class="mb-2 text-5xl lg:text-6xl text-froly">Contact</h1>
+    </div>
+  </div>
+</section>
+
+{{ include('_atoms/wave', {
+  color: 'night'
+}, with_context = false) }}
+
+<section class="text-gray-600 ">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col w-full mb-12 text-center">
+      <h2 class="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font">Get in Touch</h2>
+      <p class="mx-auto text-base lg:w-2/3">Don't be shy; I would love to hear from you!</p>
+    </div>
+    <div class="mx-auto lg:w-1/2 md:w-2/3">
+      {{sprig('Contact')}}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
