@@ -1,0 +1,18 @@
+contentColumnType: string(2000)
+fieldGroup: 35bf6274-c33d-4caa-9894-eaaf1adf2989
+handle: message
+instructions: ''
+name: Message
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 500
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,9 @@
+{# @var color - string #}
+{# purgecss: text-night text-froly text-valencia text-sand text-teal text-white text-black #}
+
+{% set classList = '-mx-0.5 wave text-' ~ color|default('night') %}
+
+<div class="overflow-hidden">
+  {{ svg('@svg/wave2.svg')|attr({class: classList}) }}
+</div>
+

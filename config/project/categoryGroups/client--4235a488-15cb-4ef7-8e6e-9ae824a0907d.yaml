@@ -1,0 +1,40 @@
+fieldLayouts:
+  8469d237-b4cc-4347-8cfa-6cd7d9ddfa76:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: client
+name: Client
+siteSettings:
+  e1df123e-aba9-482b-9ce4-52b0155cc872:
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: e2c5d56e-a781-473e-b61f-f112ddba4764

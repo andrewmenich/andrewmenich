@@ -1,0 +1,7 @@
+.loader, .htmx-request .button-text {
+  display: none;
+}
+
+.htmx-request .loader {
+  display: block;
+}

@@ -1,5 +1,5 @@
 fieldLayouts:
-  d910dc15-da65-4b5d-bbc4-c7f1ac007bc7:
+  aafc28e5-a179-4d84-ac47-88b52cb4f37c:
     tabs:
       -
         elements:
@@ -27,18 +27,25 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e391d82b-48b6-4ba5-ab0c-3b6f5ba7ab25
-            instructions: ''
-            label: ''
-            required: '1'
+            fieldUid: 4d377c00-46e0-43a3-9236-c87d82a888c9
+            instructions: null
+            label: null
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            type: craft\fieldlayoutelements\HorizontalRule
+            fieldUid: 4cfd6a68-1d9d-474d-9ca3-ef11450aa2bd
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           -
-            fieldUid: de9b26b0-3ac8-4473-b247-fe67f24d78dd
+            fieldUid: c2f8782c-80ac-4464-9669-cf04ed6e389d
             instructions: null
             label: null
             required: false
@@ -48,37 +55,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-      -
-        elements:
-          -
-            fieldUid: b36df43f-70ae-497b-b307-b195c37c621e
-            instructions: ''
-            label: Category
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Meta
-        sortOrder: 2
-      -
-        elements:
-          -
-            fieldUid: 19d1e84a-6e8f-4958-b187-a3f7373915fd
-            instructions: ''
-            label: 'Featured Image'
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: SEO
-        sortOrder: 3
-handle: todayILearned
-hasTitleField: true
-name: 'Today I Learned'
-section: 5e38ee1b-02f6-4954-aa92-36753faa2117
+handle: contactSubmissions
+hasTitleField: false
+name: 'Contact Submissions'
+section: 23fe777d-796f-42ad-9816-87eebf91d39d
 sortOrder: 1
-titleFormat: null
+titleFormat: '{nameInput}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

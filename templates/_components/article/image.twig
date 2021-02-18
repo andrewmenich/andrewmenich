@@ -1,0 +1,17 @@
+{% set image = block.image.one() %}
+
+{% if image %}
+  {% set optimizedImages = image.optimizedImage %}
+	<figure>
+	  <img
+	    src="{{ optimizedImages.src() }}"
+	    srcset="{{ optimizedImages.srcset() }}"
+	    sizes="100vw"
+	    class="w-full rounded lazy shadow-md"
+	    alt="{{image.title}}"
+	  />
+		<figcaption class="text-sm text-gray-600">
+			{{ block.caption }}
+		</figcaption>
+	</figure>
+{% endif %}

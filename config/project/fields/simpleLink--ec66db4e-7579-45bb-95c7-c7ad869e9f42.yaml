@@ -1,0 +1,14 @@
+contentColumnType: string(255)
+fieldGroup: f9938e69-64e4-4ea0-a405-767a320f556e
+handle: simpleLink
+instructions: ''
+name: 'Simple Link'
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: null
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

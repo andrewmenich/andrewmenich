@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: contactSubmissions
+name: 'Contact Submissions'
+propagationMethod: all
+siteSettings:
+  e1df123e-aba9-482b-9ce4-52b0155cc872:
+    enabledByDefault: false
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

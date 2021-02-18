@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: workSamples
+name: 'Work Samples'
+propagationMethod: all
+siteSettings:
+  e1df123e-aba9-482b-9ce4-52b0155cc872:
+    enabledByDefault: true
+    hasUrls: true
+    template: sample-work/_entry
+    uriFormat: 'sample-work/{slug}'
+type: channel

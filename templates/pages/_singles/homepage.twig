@@ -5,24 +5,24 @@
   <div class="container-default">
       
     <article class="content-wrapper content-wrapper--wide">
-      <p class="mb-1 text-lg vw-300">My name is</p>
-      <h1 class="text-4xl tracking-tight lg:text-5xl vw-900">Andrew Menich</h1>
+      <p class="mb-1 text-lg vw-300">Hi! my name is</p>
+      <h1 class="text-4xl tracking-tight text-froly lg:text-5xl vw-900">Andrew Menich</h1>
       <p class="mt-2 text-lg vw-300">and I'm a <strong class="vw-500">web developer</strong> from Toledo, Ohio. I specialize in Craft CMS development with experience using a variety of frontend and backend technologies.</p>
       <p>
 
-        <a id="github" href="https://github.com/andrewmenich" class="inline-block mt-3 mr-2 hover:text-purple" title="View my GitHub profile">
+        <a id="github" href="https://github.com/andrewmenich" class="inline-block mt-3 mr-2 text-froly hover:text-valencia" title="View my GitHub profile">
           {{ include('_includes/svg/github.twig', {
             classList: "w-7 h-7"
           }) }}
         </a>
 
-        <a id="twitter" href="https://github.com/andrewmenich" class="inline-block mt-3 mr-2 hover:text-purple" title="View my Twitter profile">
+        <a id="twitter" href="https://twitter.com/AndrewMenich" class="inline-block mt-3 mr-2 text-froly hover:text-valencia" title="View my Twitter profile">
           {{ include('_includes/svg/twitter.twig', {
             classList: "w-7 h-7"
           }) }}
         </a>
 
-        <a id="email" href="https://github.com/andrewmenich" class="inline-block mt-3 mr-2 hover:text-purple" title="Contact me via email">
+        <a id="email" href="mailto:andrew@andrewmenich.com" class="inline-block mt-3 mr-2 text-froly hover:text-valencia" title="Contact me via email">
           {{ include('_includes/svg/envelope.twig', {
             classList: "w-7 h-7"
           }) }}
@@ -33,7 +33,10 @@
   </div>
 </section>
 
-{{svg('@svg/wave.svg')|attr({class: 'text-night'})}}
+  {{ include('_atoms/wave', {
+    color: 'night'
+  }, with_context = false) }}
+
 
 <section class="py-8 container-default lg:py-20">
 
@@ -43,12 +46,12 @@
       <h2 class="mb-2 text-2xl font-medium text-night sm:text-3xl title-font">
         Recent Blog Posts
       </h2>
-      <div class="w-20 h-1 bg-teal"></div>
+      <div class="w-20 h-1 bg-froly"></div>
     </div>
 
     <div id="blog-wrapper" class="w-100">
       {% set blogPosts = craft.entries()
-        .section('blog')
+        .section('blogPosts')
         .orderBy('postDate desc')
         .limit(10)
         .with(['blogCategory', 'featuredImage'])

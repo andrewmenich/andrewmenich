@@ -1,0 +1,56 @@
+{# @var entry #}
+{% set url = url ?? null %}
+{% set image = image ?? null %}
+{% set client = client ?? null %}
+{% set tags = tags ?? null %}
+
+<div class="relative p-4 md:w-1/2 ">
+	<article class="h-full shadow-md border-opacity-60 rounded-lg overflow-hidden transition-shadow hover:shadow-lg focus-within:shadow-lg">
+		{% if image %}
+			{% set optimizedImage = image.optimizedImage %}
+			<img
+				class="lg:h-48 md:h-36 w-full object-cover object-center"
+				src="{{ optimizedImage.src() }}"
+				srcset="{{ optimizedImage.srcset() }}"
+				sizes="50vw"
+				alt="{{ image.alt }}"
+			/>
+		{% endif %}
+		<div class="p-6">
+			<h3 class="text-lg text-gray-900 tracking-wide vw-800">{{ entry.title }}</h3>
+			{% if entry.subtitle|length %}
+				<h4 class="text-sm text-gray-600 mb-1 vw-300">{{ entry.subtitle }}</h4>
+			{% endif %}
+			<p class="text-base leading-relaxed mt-2 mb-3">{{ entry.summary }}</p>
+			<dl>
+				<div class="block">
+					<dt class="w-14 inline-block vw-600">Role:</dt>
+					<dd class="inline-block vw-300">{{ entry.role }}</dd>
+				</div>
+
+				<div class="block">
+					<dt class="w-14 inline-block vw-600">Client:</dt>
+					<dd class="inline-block vw-300">{{ client.title }}</dd>
+				</div>
+
+				<div class="block">
+					<dt class="w-14 inline-block vw-600">Tech:</dt>
+					<dd class="inline vw-300">
+						{% for tag in tags %}
+							{{ tag }}{{ loop.last ? '' : ', ' }}
+						{% endfor %}
+					</dd>
+				</div>
+
+			</dl>
+
+			{{ include('_atoms/read-more.twig',
+				{
+					url: url,
+					classList: 'vw-700'
+				}
+			)}}
+		</div>
+	</article>
+</div>
+
