@@ -27,6 +27,7 @@
 			</div>
 		</div>
 	</section>
+
 	{{ include('_atoms/wave', {
 		color: 'sand'
 	}, with_context = false) }}
@@ -90,7 +91,9 @@
 					} only
 				%}
 			{% endfor %}
-
+			<p>
+				<a href="{{ url('sample-work') }}">View all sample work.</a>
+			</p>
 		</article>
 	</section>
 
