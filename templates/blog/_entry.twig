@@ -23,16 +23,16 @@
       </h2>
       {% endif %}
 
-      {% if image %}
-        {% set optimizedImages = image.optimizedImage %}
-        <img 
-          src="{{ optimizedImages.src() }}"
-          srcset="{{ optimizedImages.srcset() }}"
-          sizes="100vw"
-          class="w-full rounded"
-          alt="{{image.title}}"
-        />
-      {% endif %}
+{#      {% if image %}#}
+{#        {% set optimizedImages = image.optimizedImage %}#}
+{#        <img #}
+{#          src="{{ optimizedImages.src() }}"#}
+{#          srcset="{{ optimizedImages.srcset() }}"#}
+{#          sizes="100vw"#}
+{#          class="w-full rounded"#}
+{#          alt="{{image.title}}"#}
+{#        />#}
+{#      {% endif %}#}
       
 
       <p class="inline-block px-3 py-2 mt-4 text-black bg-sand vw-400">
