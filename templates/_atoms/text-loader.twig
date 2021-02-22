@@ -1,0 +1,23 @@
+{# @var size #}
+{# @var classList #}
+{% set size = size ?? null %}
+{% set classList = classList ?? '' %}
+
+{% switch size %}
+{% case 'xs' %}
+	{% set sizeClass = 'w-1/6' %}
+{% case 'sm' %}
+	{% set sizeClass = 'w-1/4' %}
+{% case 'md' %}
+	{% set sizeClass = 'w-1/2' %}
+{% case 'lg' %}
+	{% set sizeClass = 'w-2/3' %}
+{% case 'xl' %}
+	{% set sizeClass = 'w-full' %}
+{% case 'full' %}
+	{% set sizeClass = 'w-full' %}
+{% default %}
+	{% set sizeClass = 'w-full' %}
+{% endswitch %}
+
+<span class="animate-pulse h-4 bg-gray-400 rounded loader {{ sizeClass }} {{ classList }}"></span>

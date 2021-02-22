@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: a8521155-7afd-4462-b214-2c0909c7e927
+handle: relatedBlog
+instructions: ''
+name: 'Related Blog'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: 'Add a blog'
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:ef5ac9ba-df02-472e-b151-53647e5cfd16'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

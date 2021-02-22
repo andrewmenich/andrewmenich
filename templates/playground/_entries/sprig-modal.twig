@@ -1,0 +1,42 @@
+{% extends "_layout" %}
+
+{% import "_macros/heros.twig" as heros %}
+
+{% block content %}
+
+	{{ sprig.script }}
+
+	{{ heros.singleHero('Sprig Modal Demo') }}
+
+	<section class="mt-10 mb-20 container-default">
+		<article class="w-full col-span-12 mx-auto sm:col-start-2 sm:col-end-12">
+
+			<div class="mb-6 w-full flex flex-col items-center">
+				<h2 class="text-2xl text-night mb-4">Demo</h2>
+				{{ sprig('playground/_sprig/modal.twig') }}
+			</div>
+
+			<div class="mx-auto prose lg:prose-lg">
+				{{ include('_atoms/text-loader', {size: 'md', classList: 'my-4'}, with_context=false) }}
+					{% for block in entry.blogContent.all() %}
+						{% include '_components/article/' ~ block.type|kebab with
+							{
+								'block': block
+							} only
+						%}
+					{% endfor %}
+
+				{% set relatedBlog = entry.relatedBlog.one() %}
+				{% if relatedBlog %}
+					<p>
+						<a href="{{ relatedBlog.url }}">View Related Blog Post</a>
+					</p>
+				{% endif %}
+
+			</div>
+
+
+		</article>
+	</section>
+
+{% endblock %}
