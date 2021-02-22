@@ -1,0 +1,68 @@
+@layer components {
+    .modal {
+        @apply fixed transition inset-0 z-40 h-full overflow-hidden outline-none w-full bg-black bg-opacity-40 cursor-pointer transition flex items-center justify-center;
+    }
+
+    .modal-content {
+        @apply relative z-50 bg-white mx-auto rounded-none my-0 cursor-auto flex flex-col;
+    }
+
+    .modal.modal-full .modal-content {
+        @apply w-full rounded-none my-0 h-screen max-h-screen;
+    }
+
+    .modal-header {
+        @apply px-4 py-3 flex items-center justify-between;
+    }
+
+    .modal-body {
+        @apply p-4 relative flex-auto overflow-y-auto;
+    }
+
+    .modal-footer {
+        @apply p-3 flex justify-end items-center bg-gray-100 rounded-b;
+    }
+
+    .modal-full .modal-header{
+        @apply p-10;
+    }
+
+    .modal-full .modal-body{
+        @apply px-10 py-2;
+    }
+
+    .moda-full .modal-footer{
+        @apply px-10;
+    }
+    .scrollbar-measure {
+        @apply absolute overflow-scroll;
+        top: "-9999px";
+        width: "50px";
+        height: "50px";
+    }
+
+    @screen sm {
+        .modal-content {
+            @apply w-5/6 rounded my-8 h-auto;
+            max-height: calc(100% - 4rem);
+        }
+    }
+
+    @screen md {
+        .modal-content {
+            @apply w-4/5;
+        }
+    }
+
+    @screen lg {
+        .modal-content{
+            @apply w-1/2;
+        }
+        .modal.modal-sm .modal-content{
+            @apply w-1/4 mb-48;
+        }
+        .modal.modal-lg .modal-content {
+            @apply w-4/5;
+        }
+    }
+}

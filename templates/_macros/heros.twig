@@ -1,0 +1,15 @@
+{% macro singleHero(title) %}
+	<section class="py-12 lg:pb-12 lg:pt-16 bg-night ">
+		<div class="container-default">
+			<div class="content-wrapper content-wrapper--center">
+				<h1 class="mb-2 text-5xl lg:text-6xl text-froly ">
+					{{ title }}
+				</h1>
+			</div>
+		</div>
+	</section>
+
+	{{ include('_atoms/wave', {
+		color: 'night'
+	}, with_context = false) }}
+{% endmacro %}

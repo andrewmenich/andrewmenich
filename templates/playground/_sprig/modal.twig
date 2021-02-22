@@ -1,0 +1,72 @@
+{# Pre-rendered like everything else #}
+
+{% if sprig.isInclude %}
+	<div class="component-wrapper" x-data="modal()">
+		<button
+			sprig
+			s-target="#dynamic-modal-content"
+			s-indicator="#dynamic-modal-content"
+			x-on:click="open"
+			class="px-4 py-1 text-night text-lg bg-sand vw-600 rounded-full"
+		>
+			Open the Modal
+		</button>
+
+		<div x-cloak x-show="isOpen()" class="modal">
+			<div class="modal-content" x-on:click.away="close">
+
+				<div class="modal-header bg-gray-100">
+					<h3 class="vw-500">Sample Modal with Dynamic Content</h3>
+					<button class="p-3 bg-gray-300 text-gray-800 rounded" x-on:click="close">
+						{{ svg('@svg/x.svg')|attr({class: 'w-5 h-5 stroke-2'}) }}
+					</button>
+				</div>
+
+				<div id="dynamic-modal-content" class="modal-body">
+					{% for i in 0..4 %}
+						{% set options = {
+							size: loop.first ? 'md' : 'lg',
+							classList: loop.first ? 'my-4' : 'my-2'
+						} %}
+						{{ include('_atoms/text-loader', options, with_context=false) }}
+					{% endfor %}
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" x-on:click="close" class="vw-500">Close</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script>
+      function modal(){
+        return {
+          show: false,
+          open(){
+              this.show = true;
+          },
+          close(){
+              this.show = false;
+          },
+          isOpen(){
+              return this.show === true;
+          }
+        }
+      }
+	</script>
+{% endif %}
+
+
+{# Dynamically Loaded when Sprig is triggered #}
+
+{% if sprig.isRequest %}
+	{# Call any Craft queries here #}
+	{% set posts = craft.entries().section('blogPosts').limit(4).all() %}
+	<h4 class="my-4">Fetched Blog Post Titles</h4>
+	{% for post in posts %}
+		<p class="my-2">{{ post.title }}</p>
+	{% endfor %}
+{% endif %}
+

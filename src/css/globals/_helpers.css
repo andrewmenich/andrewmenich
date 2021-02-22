@@ -18,3 +18,11 @@
 .bg-inherit{
   background: inherit!important;
 }
+
+.htmx-request .loader, .htmx-request.loader{
+    display: block;
+}
+
+.loader{
+    display: none;
+}

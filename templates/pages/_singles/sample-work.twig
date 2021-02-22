@@ -1,5 +1,7 @@
 {% extends "_layout" %}
 
+{% import "_macros/heros.twig" as heros %}
+
 {#{% set param = craft.app.request.getParam('a') %}#}
 {#{% set active = applications.activeApplications|split(', ')  %}#}
 
@@ -22,19 +24,7 @@
 
 	{% set category = category ?? null %}
 
-	<section class="py-6 lg:pb-12 lg:pt-16 bg-night">
-		<div class="container-default">
-			<div class="content-wrapper content-wrapper--center">
-				<h1 class="mb-2 text-5xl lg:text-6xl text-froly vw-900">
-					Sample Work
-				</h1>
-			</div>
-		</div>
-	</section>
-
-	{{ include('_atoms/wave', {
-		color: 'night'
-	}, with_context = false) }}
+	{{ heros.singleHero('Sample Work') }}
 
 	<section class="py-12 container-default">
 		<div class="content-wrapper content-wrapper--full">
