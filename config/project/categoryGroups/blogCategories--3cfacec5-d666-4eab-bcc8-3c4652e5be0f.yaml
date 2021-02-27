@@ -33,7 +33,7 @@ name: 'Blog Categories'
 siteSettings:
   e1df123e-aba9-482b-9ce4-52b0155cc872:
     hasUrls: true
-    template: blog/index
+    template: pages/_singles/blog
     uriFormat: 'blog/category/{slug}'
 structure:
   maxLevels: null
