@@ -9,7 +9,8 @@ if(!mix.inProduction()){
      .js('./src/js/app.js', 'js')
      .postCss('./src/css/app.css', 'css', [ 
         require('postcss-import'),
-        require('tailwindcss')('./tailwind.config.js')
+        require('tailwindcss')('./tailwind.config.js'),
+        require('postcss-focus-visible')
       ])
      .sourceMaps(true, 'source-map');
   mix.webpackConfig({
@@ -66,6 +67,7 @@ if(!mix.inProduction()){
           'focus-within-pseudo-class': false
         }
       }),
+      require('postcss-focus-visible'),
       require('cssnano'),
       // purgecss({
       //   content: ['./templates/**/*.html', './templates/**/*.twig', './src/js/**/*.js', './public/assets/svg/**/*.svg'],

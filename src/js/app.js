@@ -1,5 +1,6 @@
 // import './components/test';
 import 'alpinejs';
+import 'focus-visible';
 
 if(module.hot){
   module.hot.accept();

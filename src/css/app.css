@@ -18,11 +18,3 @@ main {
     min-height: calc(100vh - 264px);
   }
 }
-
-.grid-bg{
-  /* Matches the CSS Grid  */
-  /* TODO setup corresponding media query for when grid collapses */
-  background-size: 16.66666667%;
-  background-image:linear-gradient(to right, #E2E8F0 1px, transparent 1px);
-  border-right: 1px solid #E2E8F0;
-}

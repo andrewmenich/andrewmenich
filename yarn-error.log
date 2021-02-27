@@ -1,0 +1,76 @@
+Arguments: 
+  /Users/andrewmenich/.nvm/versions/node/v12.14.0/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js
+
+PATH: 
+  /Users/andrewmenich/.nvm/versions/node/v12.14.0/bin:/usr/local/opt/ruby/bin:/Users/andrewmenich/.gem/ruby/2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/andrewmenich/Documents/Sites/andrewmenich/node_modules/.bin:/Users/andrewmenich/.composer/vendor/bin:/Users/andrewmenich/.rvm/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.14.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/andrewmenich/Documents/Sites/andrewmenich/package.json: Unexpected token } in JSON at position 1439
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "nitro-mix-demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "dev": "concurrently --names \"DEVELOPMENT,PRODUCTION\" --raw --kill-others-on-fail  \"npx mix watch --hot\" \"npx mix --production &>/dev/null \"",
+      "development": "npx mix",
+      "watch": "npx mix watch",
+      "hot": "npx mix watch --hot",
+      "prod": "npx mix --production"
+    },
+    "keywords": [],
+    "author": "Andrew Menich",
+    "license": "MIT",
+    "devDependencies": {
+      "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+      "@babel/preset-env": "^7.12.1",
+      "browser-sync": "^2.26.13",
+      "browser-sync-webpack-plugin": "^2.2.2",
+      "concurrently": "^5.3.0",
+      "cross-env": "^7.0.2",
+      "focus-visible": "^5.2.0",
+      "laravel-mix": "^6.0.0",
+      "laravel-mix-stylelint": "^0.2.0",
+      "postcss": "^8.1.1",
+      "postcss-focus-visible": "^5.0.0",
+      "postcss-import": "^12.0.1",
+      "postcss-preset-env": "^6.7.0",
+      "resolve-url-loader": "^3.1.1",
+      "tailwindcss-debug-screens": "^2.0.0",
+      "vue-template-compiler": "^2.6.12",
+      "webpack-clean-obsolete-chunks": "^0.4.0",
+      "webpack-cli": "^4.0.0",
+      "webpack-dashboard": "^3.2.1"
+    },
+    "dependencies": {
+      "@fullhuman/postcss-purgecss": "^4.0.0",
+      "@tailwindcss/forms": "^0.2.1",
+      "@tailwindcss/typography": "^0.3.1",
+      "alpinejs": "^2.7.0",
+      "babel-plugin-prismjs": "^2.0.1",
+      "prismjs": "^1.22.0",
+      "tailwindcss": "^2.0.0",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

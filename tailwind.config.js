@@ -74,7 +74,14 @@ module.exports = {
     },
   },
   variants: {
-    animation: ["motion-safe", "hover"]
+    animation: ["motion-safe", "hover"],
+      textDecoration: ['focus-visible'],
+      outline: ['focus-visible'],
+      ringOffset: ['focus-visible'],
+      ringWidth: ['focus-visible'],
+      ringColor: ['focus-visible'],
+      ringOffsetWidth: ['focus-visible'],
+      ringOffsetColor: ['focus-visible'],
   },
   plugins: [
     require('@tailwindcss/forms'),
