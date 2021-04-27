@@ -27,14 +27,14 @@
 					{% for allCategory in allCategories %}
 						<label 
 							for="category-{{allCategory.id}}" 
-							class="flex items-center justify-center mr-2 mb-2 px-2 py-1 text-xs text-night tracking-wide rounded-full cursor-pointer border border-night vw-400 hover:text-sand hover:bg-night {{allCategory.id == category ? 'bg-night text-sand vw-400'}}"
+							class="flex items-center justify-center mr-2 mb-2 px-2 py-1 text-xs text-night tracking-wide rounded-full cursor-pointer border border-night vw-400 hover:text-sand hover:bg-night {{allCategory.id == category ? 'bg-night text-sand vw-400'}} focus-within:outline-none focus-within:ring-offset-1 focus-within:ring-offset-night focus-within:ring-2 ring-valencia"
 						>
 							{{ allCategory.title }}
 							<input sprig 
 								type="checkbox" 
 								name="category" 
 								id="category-{{allCategory.id}}" 
-								class="invisible w-0 h-0" 
+								class="absolute top-0 w-0 h-0 focus:outline-none focus:ring-offset-0 focus:ring-0"
 								value="{{allCategory.id}}"
 							/>
 						</label>
@@ -43,14 +43,14 @@
           {% if category %}
           <label 
 						for="category-clear" 
-						class="flex items-center justify-center px-2 py-1 mb-2 mr-2 text-xs text-black uppercase border rounded-full cursor-pointer stroke-2 border-sand vw-400 bg-sand hover:stroke-3"
+						class="flex items-center justify-center px-2 py-1 mb-2 mr-2 text-xs text-black uppercase border rounded-full cursor-pointer stroke-2 border-sand vw-400 bg-sand hover:stroke-3 focus-within:outline-none focus-within:ring-offset-1 focus-within:ring-offset-night focus-within:ring-2 ring-valencia"
 					>
 						Clear
 						<input sprig 
 							type="checkbox" 
 							name="category" 
 							id="category-clear" 
-							class="invisible w-0 h-0" 
+							class="absolute top-0 w-0 h-0 focus:outline-none focus:ring-offset-0 focus:ring-0"
 							value="" 
 						/>
 						{{ svg('@svg/x.svg')|attr({ class: 'ml-2 icon icon-tabler icon-tabler-x' }) }}

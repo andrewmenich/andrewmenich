@@ -1,4 +1,5 @@
-dateModified: 1613963129
+dateModified: 1614464204
+dateModified: 1619312385
 email:
   fromEmail: andrew@andrewmenich.com
   fromName: 'Andrew Menich'
@@ -89,7 +90,7 @@ system:
   edition: solo
   live: true
   name: 'Andrew Menich'
-  schemaVersion: 3.6.4
+  schemaVersion: 3.6.8
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

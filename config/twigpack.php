@@ -24,8 +24,8 @@ return [
         ],
         // webpack-dev-server config
         'devServer' => [
-            'manifestPath' => 'http://192.168.64.1:8080/',
-            'publicPath' => 'http://192.168.64.1:8080/',
+            'manifestPath' => 'http://localhost:8080/build/',
+            'publicPath' => 'http://andrewmenich.test:3000/build/',
         ],
         // Bundle to use with the webpack-dev-server
         'devServerBuildType' => 'modern',

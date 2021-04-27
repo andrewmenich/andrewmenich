@@ -1,3 +1,4 @@
+@import 'tailwindcss/components';
 @import '_navigation';
 @import '_prism';
 @import '_contact';
