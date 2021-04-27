@@ -78,7 +78,7 @@
 }
 
 .prose code{
-  @apply inline-block px-2 py-1 text-gray-600 bg-gray-100;
+  @apply inline-block px-2 py-0 text-gray-600 bg-gray-100;
 }
 
 .prose code::before, .prose code::after{
