@@ -10,10 +10,6 @@
   font-display: swap;
 }
 
-*{
-  border: 1px solid blue;
-}
-
 main {
   min-height: calc(100vh - 216px);
 }
