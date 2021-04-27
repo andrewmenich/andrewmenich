@@ -1,7 +1,15 @@
-let path = require('path');
-let CleanObsoleteChunks = require('webpack-clean-obsolete-chunks');
 let mix = require('laravel-mix');
-const purgecss = require('@fullhuman/postcss-purgecss')
+
+const config = {
+  host: process.env.HMR_SHARED_HOST,
+  port: process.env.HMR_PORT,
+  path: process.env.HMR_PATH,
+  clientHost: process.env.HMR_SITE_HOST,
+  protocol: process.env.HMR_HTTPS === "true" ? 'https://' : 'http://',
+  outputPath: function(){
+    return `${this.protocol}${this.clientHost}:${this.port}${this.path}`
+  },
+}
 
 // ? ========== DEVELOPMENT SETTINGS ==========
 if(!mix.inProduction()){
@@ -14,46 +22,46 @@ if(!mix.inProduction()){
       ])
      .sourceMaps(true, 'source-map');
   mix.webpackConfig({
-    // fixes hmr bug introduced in Webpack 5
       target: 'web',
       output: {
-        publicPath: 'http://0.0.0.0:8080/',
+        publicPath: config.outputPath()
       },
       devServer:{
-        public: 'http://0.0.0.0:8080/',
-        host: '0.0.0.0',
-        port: 8080,
-        headers: {
-          'Access-Control-Allow-Origin': '*'
-        }
+        host: config.host,
+        port: config.port,
+        dev: {
+          publicPath: config.path,
+        },
+        client: {
+          port: config.port,
+          host: config.clientHost,
+          overlay: true,
+          progress: false,
+        },
+        firewall: false,
+        static: {
+          directory: './templates',
+          publicPath: '/',
+          watch: true
+        },
+        liveReload: true,
+      },
+      infrastructureLogging: {
+        level: 'log',
       },
     });
-  mix.browserSync({
-    // ? Defined in the .env file - sameas default site url
-    proxy: process.env.DEFAULT_SITE_URL,
-    watch: true,
-    watchOptions: {
-      ignoreInitial: true,
-      ignored: '*.css'
-    },
-    files: ['./templates'],
-    ignore: "/node_modules/",
-    cors: true
-  });
 } else {
   // ? ========== PRODUCTION SETTINGS ==========
   mix.webpackConfig({
     output: {
       publicPath: '/assets/dist/',
       chunkFilename: 'js/components/[name].[chunkhash:8].js',
+      clean: true,
     },
     optimization: {
       chunkIds: 'named',
       moduleIds: 'named'
     },
-    plugins: [
-      new CleanObsoleteChunks(),
-    ]
   });
   mix.setPublicPath('public/assets/dist/')
     .js('./src/js/app.js', 'js')

@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
+  mode: 'jit',
   purge: ['./templates/**/*.html', './templates/**/*.twig', './src/js/**/*.js', './public/assets/svg/**/*.svg'],
   theme: {
     fontFamily: {
@@ -72,16 +73,6 @@ module.exports = {
          xl: "1100px"
       }
     },
-  },
-  variants: {
-    animation: ["motion-safe", "hover"],
-      textDecoration: ['focus-visible'],
-      outline: ['focus-visible'],
-      ringOffset: ['focus-visible'],
-      ringWidth: ['focus-visible'],
-      ringColor: ['focus-visible'],
-      ringOffsetWidth: ['focus-visible'],
-      ringOffsetColor: ['focus-visible'],
   },
   plugins: [
     require('@tailwindcss/forms'),
