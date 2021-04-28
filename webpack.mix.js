@@ -81,9 +81,9 @@ if(!mix.inProduction()){
       //   content: ['./templates/**/*.html', './templates/**/*.twig', './src/js/**/*.js', './public/assets/svg/**/*.svg'],
       // })
     ])
-  mix.options({
-    processCssUrls: false
-  })
+  // mix.options({
+  //   processCssUrls: false
+  // })
 }
 
 mix.disableNotifications();

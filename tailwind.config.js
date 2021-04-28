@@ -54,13 +54,6 @@ module.exports = {
         DEFAULT: {
           css: {
             color: '#000411',
-            a: {
-              color: '#025E73',
-              'text-decoration': 'none',
-              '&:hover': {
-                color: '#102040',
-              },
-            },
           },
         },
       }
