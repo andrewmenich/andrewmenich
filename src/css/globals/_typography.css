@@ -89,7 +89,7 @@
   @apply vw-300;
 }
 
-.prose a, a{
+.prose a{
   @apply vw-500 text-valencia hover:text-[#d43939] no-underline focus-visible:outline-none focus-visible:ring-offset-1 focus-visible:ring-offset-night focus-visible:ring-2 ring-valencia;
 }
 
