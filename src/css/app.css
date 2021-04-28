@@ -1,7 +1,7 @@
 @import 'tailwindcss/base';
-@import 'globals/all';
 @import 'components/all';
 @import 'tailwindcss/utilities';
+@import 'globals/all';
 
 @font-face {
   font-family: "Public Sans";

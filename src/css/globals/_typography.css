@@ -62,7 +62,7 @@
 }
 
 .prose h2{
-  @apply vw-700;
+  @apply mt-3 vw-700;
 }
 
 .prose h3{
