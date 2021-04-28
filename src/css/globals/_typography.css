@@ -96,3 +96,11 @@
 .callout p{
   @apply my-0 !important;
 }
+
+.prose > ul > li > :last-child{
+  margin-bottom: 0;
+}
+
+.prose > ul > li > :first-child{
+  margin-top: 0;
+}
