@@ -1,5 +1,11 @@
 <?php
 
+use craft\helpers\App;
+
+$host = App::env('HMR_HOST');
+$port = App::env('HMR_PORT');
+$path = App::env('HMR_PATH');
+
 return [
     // Global settings
     '*' => [
@@ -24,7 +30,7 @@ return [
         ],
         // webpack-dev-server config
         'devServer' => [
-            'manifestPath' => 'http://localhost:8080/build/',
+            'manifestPath' => 'http://localhost:3000/build/',
             'publicPath' => 'http://andrewmenich.test:3000/build/',
         ],
         // Bundle to use with the webpack-dev-server
