@@ -1,10 +1,8 @@
 // import './components/test';
 import 'alpinejs';
 import 'focus-visible';
-
-if(module.hot){
-  module.hot.accept();
-}
+import 'vite/dynamic-import-polyfill'
+import './css/app.css';
 
 window.navigation = function(){
   const body = document.querySelector('body');
@@ -33,7 +31,7 @@ window.navigation = function(){
 }
 
 if(document.querySelector('.prism')){
-  import('./components/prism' /* webpackChunkkName: 'prism' */).then(instance => {
+  import('./js/components/prism' /* webpackChunkkName: 'prism' */).then(instance => {
     instance.initPrism();
   });
 }
