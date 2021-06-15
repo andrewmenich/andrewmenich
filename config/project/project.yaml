@@ -1,4 +1,4 @@
-dateModified: 1619312385
+dateModified: 1622648821
 email:
   fromEmail: andrew@andrewmenich.com
   fromName: 'Andrew Menich'
@@ -82,6 +82,10 @@ plugins:
     enabled: true
     schemaVersion: 1.0.1
   twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
