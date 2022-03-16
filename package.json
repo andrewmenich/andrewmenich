@@ -16,7 +16,7 @@
     "@vitejs/plugin-legacy": "^1.7.1",
     "babel-plugin-prismjs": "^2.0.1",
     "focus-visible": "^5.2.0",
-    "postcss": "^8.5.11",
+    "postcss": "^8.4.11",
     "postcss-focus-visible": "^5.0.0",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^7.4.0",
