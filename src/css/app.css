@@ -1,7 +1,8 @@
 @import 'tailwindcss/base';
 @import 'components/all';
-@import 'tailwindcss/utilities';
+
 @import 'globals/all';
+@import 'tailwindcss/utilities';
 
 @font-face {
   font-family: "Public Sans";
@@ -21,10 +22,8 @@ main {
 }
 
 @layer utilities {
-  @variants responsive {
-    .animation-none {
-      animation: none !important;
-    }
+  .animation-none {
+    animation: none !important;
   }
 }
 

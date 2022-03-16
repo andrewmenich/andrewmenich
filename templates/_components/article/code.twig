@@ -2,9 +2,11 @@
 	{{ block.caption }}
 </aside>
 <pre class="text-sm">
-  <code class="prism language-{{block.codeType}}">
-    {% spaceless %}
-      {{ block.code }}
-    {% endspaceless %}
+  <code class="prism lang-{{block.codeType}}">
+      {% spaceless %}
+        {{ block.code }}
+      {% endspaceless %}
   </code>
 </pre>
+
+{# language-css language-php lang-php language-shellsession language-md language-javascript language-html language-twig #}

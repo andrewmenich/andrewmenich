@@ -3,11 +3,9 @@
 }
 
 @layer utilities {
-  @variants responsive {
-    .text-upright{
-      text-orientation:mixed;
-      writing-mode: vertical-lr;
-    }
+  .text-upright{
+    text-orientation:mixed;
+    writing-mode: vertical-lr;
   }
 }
 

@@ -4,20 +4,16 @@ import ViteRestart from 'vite-plugin-restart';
 // https://vitejs.dev/config/
 export default ({ command }) => ({
   base: command === 'serve' ? '' : '/assets/dist/',
-  publicDir: 'banana_ice_cream_yum_yum_yum',
+  publicDir: 'non-existent-path',
   build: {
     manifest: true,
-    outDir: 'public/assets/dist/',
+    outDir: './public/assets/dist/',
     rollupOptions: {
       input: {
         main: './src/main.js',
-      },
-      output: {
-        sourcemap: true
       }
     },
   },
-  
   plugins: [
     legacy({
       targets: ['defaults', 'IE 11']
@@ -30,12 +26,12 @@ export default ({ command }) => ({
   ],
   server: {
     host: '0.0.0.0',
-    port: 3000,
+    port: 3002,
     strictPort: true,
     https: false,
     hmr: {
-      host: 'andrewmenich.test',
-      port: '3000',
+      host: 'localhost',
+      port: 3002,
       path: '/'
     }
   },

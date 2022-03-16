@@ -1,9 +1,9 @@
 // import './components/test';
-import 'alpinejs';
+import Alpine from 'alpinejs';
 import 'focus-visible';
-import 'vite/dynamic-import-polyfill'
 import './css/app.css';
 
+window.Alpine = Alpine;
 window.navigation = function(){
   const body = document.querySelector('body');
   return {
@@ -30,6 +30,8 @@ window.navigation = function(){
   }
 }
 
+Alpine.start()
+
 if(document.querySelector('.prism')){
   import('./js/components/prism' /* webpackChunkkName: 'prism' */).then(instance => {
     instance.initPrism();
@@ -38,8 +40,6 @@ if(document.querySelector('.prism')){
 
 if(document.querySelector('.oos')){
   const gridItems = document.querySelectorAll('.oos');
-
-
   const onChange = (changes, observer) => {
     changes.forEach(change => {
       if(change.intersectionRatio === 1){

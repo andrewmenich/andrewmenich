@@ -1,8 +1,8 @@
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./templates/**/*.html', './templates/**/*.twig', './src/js/**/*.js', './public/assets/svg/**/*.svg'],
+  content: ['./templates/**/*.twig'],
   theme: {
     fontFamily: {
       display: ['Public Sans', 'Helvetica', 'serif'],
@@ -10,6 +10,7 @@ module.exports = {
     },
     colors: {
       transparent: 'transparent',
+      current: 'currentColor',
       black: '#000411',
       white: '#FAFAFA',
       gray: colors.coolGray,

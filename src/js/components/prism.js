@@ -1,9 +1,9 @@
 import Prism from 'prismjs';
-// import * as Normalizer from 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
+import 'prismjs/themes/prism-tomorrow.css';
+import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
 
 export function initPrism() {
-
-  Prism.plugins.NormalizeWhitespace.setDefault({
+  Prism.plugins.NormalizeWhitespace.setDefaults({
     'remove-trailing': true,
     'remove-indent': true,
     'left-trim': true,
@@ -11,5 +11,4 @@ export function initPrism() {
   });
   
   Prism.highlightAll();
-
 };

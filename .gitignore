@@ -5,3 +5,4 @@
 *.hot-update.json
 /.vscode
 /node_modules
+/public/assets/dist/

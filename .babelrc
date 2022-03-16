@@ -3,8 +3,8 @@
   "plugins": [
     "@babel/plugin-syntax-dynamic-import",
     ["prismjs", {
-      "languages": ["javascript", "css", "markup", "twig", "php", "shellsession"],
-      "plugins": ["line-numbers", "normalize-whitespace"],
+      "languages": ["php", "javascript", "css", "markup", "twig", "md", "phpdoc", "php-extras", "shellsession"],
+      "plugins": ["normalize-whitespace"],
       "theme": "tomorrow",
       "css": true
     }]

@@ -5,12 +5,13 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 	<style>
-      [x-cloak] {
-          display: none;
-      }
+    [x-cloak] {
+      display: none!important;
+    }
+    svg:not(.wave){
+      width: 1rem;
+      height: auto;
+    }
 	</style>
   
-  {{ craft.vite.script('/src/main.js') }}
-
-
 </head>
