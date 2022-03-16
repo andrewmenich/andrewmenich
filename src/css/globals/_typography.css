@@ -74,7 +74,7 @@
   @apply tracking-tight text-gray-500 uppercase vw-700;
 }
 
-.prose code{
+.prose code:not(.prism){
   @apply inline-block px-2 py-0 text-gray-600 bg-gray-100;
 }
 
