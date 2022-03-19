@@ -13,5 +13,9 @@
       height: auto;
     }
 	</style>
+
+  {% if not craft.app.config.general.devMode %}
+    <link rel="stylesheet" href="{{ craft.vite.entry("app.css") }}">
+  {% endif %}
   
 </head>
