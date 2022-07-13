@@ -1,4 +1,4 @@
-@import '_variables';
-@import '_typography';
-@import '_helpers';
-@import '_theme';
+@import '_variables.css';
+@import '_typography.css';
+@import '_helpers.css';
+@import '_theme.css';

@@ -31,7 +31,7 @@
         @apply px-10 py-2;
     }
 
-    .moda-full .modal-footer{
+    .modal-full .modal-footer{
         @apply px-10;
     }
     .scrollbar-measure {

@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  content: ['./templates/**/*.twig'],
+  content: ['./templates/**/*.twig', './public/assets/svg/**/*.svg'],
   theme: {
     fontFamily: {
       display: ['Public Sans', 'Helvetica', 'serif'],
@@ -27,7 +27,7 @@ module.exports = {
         valencia: '#D94E4E'
       },
       animation: {
-        'fade-in-right': 'fadeInRight .4s ease-out',
+        'fade-in-right': 'fadeInRight .4s ease-out forwards',
         'fade-in': "fadeIn .12s ease-in forwards",
         'bounce-right': 'bounceRight 1s infinite'
       },

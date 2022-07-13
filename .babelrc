@@ -1,7 +1,5 @@
 {
-  "presets": ["@babel/preset-env"],
   "plugins": [
-    "@babel/plugin-syntax-dynamic-import",
     ["prismjs", {
       "languages": ["php", "javascript", "css", "markup", "twig", "md", "phpdoc", "php-extras", "shellsession"],
       "plugins": ["normalize-whitespace"],

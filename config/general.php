@@ -37,7 +37,7 @@ return [
         'devMode' => true,
         'allowAdminChanges' => true,
         'aliases' => [
-            '@svg' => '/app/public/assets/svg'
+            '@svg' => '/var/www/html/public/assets/svg'
         ]
     ], 
 

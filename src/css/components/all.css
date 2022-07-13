@@ -1,5 +1,5 @@
 @import 'tailwindcss/components';
-@import '_navigation';
-@import '_prism';
-@import '_contact';
-@import '_modal';
+@import '_navigation.css';
+@import '_prism.css';
+@import '_contact.css';
+@import '_modal.css';

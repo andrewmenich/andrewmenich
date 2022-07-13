@@ -1,5 +1,6 @@
 import legacy from '@vitejs/plugin-legacy'
 import ViteRestart from 'vite-plugin-restart';
+import babel from 'vite-plugin-babel'
 
 // https://vitejs.dev/config/
 export default ({ command }) => ({
@@ -23,12 +24,13 @@ export default ({ command }) => ({
         './templates/**/*',
       ],
     }),
+    babel(),
   ],
   server: {
     host: '0.0.0.0',
     port: 3002,
     strictPort: true,
-    https: false,
+    https: true,
     hmr: {
       host: 'localhost',
       port: 3002,

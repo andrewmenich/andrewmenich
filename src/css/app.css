@@ -1,12 +1,12 @@
 @import 'tailwindcss/base';
-@import 'components/all';
+@import 'components/all.css';
 
-@import 'globals/all';
+@import 'globals/all.css';
 @import 'tailwindcss/utilities';
 
 @font-face {
   font-family: "Public Sans";
-  src: url("../fonts/PublicSans.ttf") format("truetype");
+  src: url("/fonts/PublicSans.ttf") format("truetype");
   font-variation-settings: "wght" 900;
   font-display: swap;
 }
