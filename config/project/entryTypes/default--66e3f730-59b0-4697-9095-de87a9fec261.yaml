@@ -1,7 +1,8 @@
 fieldLayouts:
-  8469d237-b4cc-4347-8cfa-6cd7d9ddfa76:
+  059cf3a3-b3ec-4650-8823-2c0b971ee84c:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,7 +10,9 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -24,17 +27,21 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
+            uid: 16e0e4bd-7977-4101-9f53-97ad62fd6f50
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
-handle: client
-name: Client
-siteSettings:
-  e1df123e-aba9-482b-9ce4-52b0155cc872:
-    hasUrls: false
-    template: null
-    uriFormat: null
-structure:
-  maxLevels: null
-  uid: e2c5d56e-a781-473e-b61f-f112ddba4764
+        uid: 23047120-5ec6-448e-b2ea-6525ca4a5a58
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 18e01b2e-58fc-4c77-9e95-52cebfba80e8 # Blog Categories
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

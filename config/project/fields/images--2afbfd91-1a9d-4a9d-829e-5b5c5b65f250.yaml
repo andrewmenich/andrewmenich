@@ -8,7 +8,7 @@ settings:
   allowSelfRelations: false
   allowUploads: true
   allowedKinds: null
-  defaultUploadLocationSource: 'volume:e6e9b580-9294-46e1-a0c2-694416d5565e'
+  defaultUploadLocationSource: 'volume:e6e9b580-9294-46e1-a0c2-694416d5565e' # Images
   defaultUploadLocationSubpath: ''
   limit: ''
   localizeRelations: false
@@ -18,7 +18,7 @@ settings:
   showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  singleUploadLocationSource: 'volume:e6e9b580-9294-46e1-a0c2-694416d5565e'
+  singleUploadLocationSource: 'volume:e6e9b580-9294-46e1-a0c2-694416d5565e' # Images
   singleUploadLocationSubpath: ''
   source: null
   sources: '*'

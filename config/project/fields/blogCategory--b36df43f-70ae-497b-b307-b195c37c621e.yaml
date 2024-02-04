@@ -5,19 +5,18 @@ instructions: ''
 name: 'Blog Category'
 searchable: false
 settings:
-  allowLimit: false
-  allowMultipleSources: false
   allowSelfRelations: false
   branchLimit: ''
   limit: null
   localizeRelations: false
+  maintainHierarchy: true
   selectionLabel: ''
   showSiteMenu: false
-  source: 'group:3cfacec5-d666-4eab-bcc8-3c4652e5be0f'
-  sources: '*'
+  sources:
+    - 'section:18e01b2e-58fc-4c77-9e95-52cebfba80e8' # Blog Categories
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null
 translationKeyFormat: null
 translationMethod: site
-type: craft\fields\Categories
+type: craft\fields\Entries

@@ -5,19 +5,18 @@ instructions: ''
 name: Client
 searchable: false
 settings:
-  allowLimit: false
-  allowMultipleSources: false
   allowSelfRelations: false
   branchLimit: ''
   limit: null
   localizeRelations: false
+  maintainHierarchy: true
   selectionLabel: ''
   showSiteMenu: true
-  source: 'group:4235a488-15cb-4ef7-8e6e-9ae824a0907d'
-  sources: '*'
+  sources:
+    - 'section:e22dd902-a7de-4892-b429-ac1f7edfaacc' # Client
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null
 translationKeyFormat: null
 translationMethod: site
-type: craft\fields\Categories
+type: craft\fields\Entries

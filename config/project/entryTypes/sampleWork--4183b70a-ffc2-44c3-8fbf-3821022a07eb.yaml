@@ -23,7 +23,7 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
             warning: null
             width: 100
           -
@@ -65,7 +65,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: c63e7b1b-5ccd-45ea-81bb-7bd6a3068075
+            fieldUid: c63e7b1b-5ccd-45ea-81bb-7bd6a3068075 # Client
             instructions: null
             label: null
             required: false

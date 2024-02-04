@@ -1,25 +1,59 @@
-dateModified: 1622648821
+dateModified: 1707064825
 email:
   fromEmail: andrew@andrewmenich.com
   fromName: 'Andrew Menich'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      addSubfolderToRootUrl: ''
+      autoFocalPoint: ''
+      bucket: andrewmeni.ch
+      bucketSelectionMode: manual
+      cfDistributionId: $AWS_CLOUDFRONT_ID
+      cfPrefix: ''
+      expires: '14 days'
+      keyId: $AWS_IAM_ID
+      makeUploadsPublic: '1'
+      region: us-east-2
+      secret: $AWS_IAM_KEY
+      subfolder: ''
+    type: craft\awss3\Fs
+    url: $AWS_CLOUDFRONT_DIST
 graphql:
   publicToken:
     enabled: false
     expiryDate: null
+meta:
+  __names__:
+    18e01b2e-58fc-4c77-9e95-52cebfba80e8: 'Blog Categories' # Blog Categories
+    23bde709-c2e0-473a-99e8-2f34ca4b503c: Text # Text
+    66e3f730-59b0-4697-9095-de87a9fec261: Default # Default
+    831b2141-2892-4c55-b542-83d579bd631d: 'Rich Text' # Rich Text
+    aeb32ee3-d822-4551-9d9d-5d7934a6e159: Default # Default
+    b36df43f-70ae-497b-b307-b195c37c621e: 'Blog Category' # Blog Category
+    bb97edd2-4089-4569-baa6-15e309da1d3f: Standard # Standard
+    c63e7b1b-5ccd-45ea-81bb-7bd6a3068075: Client # Client
+    d26a1944-523b-48f1-8181-7b32f91d7aaf: Applications # Applications
+    e6e9b580-9294-46e1-a0c2-694416d5565e: Images # Images
+    e22dd902-a7de-4892-b429-ac1f7edfaacc: Client # Client
+    e3302f05-eef7-4515-962a-2892b93bf452: Simple # Simple
+    fe33b57c-e4e7-473c-a517-c546c16a3c0a: 'Rich Text' # Rich Text
 plugins:
   aws-s3:
     edition: standard
     enabled: true
-    schemaVersion: '1.2'
+    schemaVersion: '2.0'
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.0
+    schemaVersion: 3.0.0.0
   feed-me:
     edition: standard
     enabled: true
-    schemaVersion: 4.3.0
+    schemaVersion: 5.1.0.0
   image-optimize:
     edition: standard
     enabled: true
@@ -75,8 +109,8 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: MT4GKC8UPHCGSAN6W432IDJI
-    schemaVersion: 3.0.9
+    licenseKey: W3XHST0K6C5ML0QJNJWOIX2V
+    schemaVersion: 3.0.12
   sprig:
     edition: standard
     enabled: true
@@ -93,10 +127,11 @@ system:
   edition: solo
   live: true
   name: 'Andrew Menich'
-  schemaVersion: 3.6.8
+  schemaVersion: 4.5.3.0
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
+  deactivateByDefault: false
   defaultGroup: null
   photoSubpath: ''
   photoVolumeUid: null

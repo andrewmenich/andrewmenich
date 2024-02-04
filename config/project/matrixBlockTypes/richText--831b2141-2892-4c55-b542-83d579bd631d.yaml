@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 23bde709-c2e0-473a-99e8-2f34ca4b503c
+            fieldUid: 23bde709-c2e0-473a-99e8-2f34ca4b503c # Text
             instructions: null
             label: null
             required: false
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  23bde709-c2e0-473a-99e8-2f34ca4b503c:
+  23bde709-c2e0-473a-99e8-2f34ca4b503c: # Text
     contentColumnType: text
     fieldGroup: null
     handle: text
@@ -26,24 +26,17 @@ fields:
     settings:
       availableTransforms: '*'
       availableVolumes: '*'
-      cleanupHtml: true
+      ckeConfig: bb97edd2-4089-4569-baa6-15e309da1d3f # Standard
       columnType: text
-      configSelectionMode: choose
       defaultTransform: ''
-      manualConfig: ''
+      enableSourceEditingForNonAdmins: false
       purifierConfig: ''
       purifyHtml: '1'
-      redactorConfig: Standard.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
-    type: craft\redactor\Field
+    type: craft\ckeditor\Field
 handle: richText
 name: 'Rich Text'
 sortOrder: 1

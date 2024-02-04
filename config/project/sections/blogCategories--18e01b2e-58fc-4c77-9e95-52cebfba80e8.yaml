@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: blogCategories
+name: 'Blog Categories'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  e1df123e-aba9-482b-9ce4-52b0155cc872:
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_singles/blog
+    uriFormat: 'blog/category/{slug}'
+structure:
+  maxLevels: null
+  uid: 454b32e9-f61e-4dc6-8a7b-dc8c892ec341
+type: structure

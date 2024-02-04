@@ -23,7 +23,7 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\entries\EntryTitleField
             warning: null
             width: 100
           -
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fe33b57c-e4e7-473c-a517-c546c16a3c0a
+            fieldUid: fe33b57c-e4e7-473c-a517-c546c16a3c0a # Rich Text
             instructions: ''
             label: 'About Me'
             required: ''
